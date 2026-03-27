@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for d:*)",
+      "Bash(do touch:*)",
+      "Bash(done)",
+      "Bash(pip install:*)",
+      "Bash(py -3.12 --version)",
+      "Bash(py -3.13 --version)",
+      "Bash(py -3.11 --version)",
+      "Bash(py -3.13 -m pip install -r requirements.txt)",
+      "Bash(py -3.13 -m playwright install chromium)",
+      "Bash(py -3.13 main.py)"
+    ]
+  }
+}
