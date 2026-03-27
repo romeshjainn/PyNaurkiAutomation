@@ -6,6 +6,7 @@ load_dotenv()
 # Credentials
 NAUKRI_EMAIL: str = os.getenv("NAUKRI_EMAIL", "")
 NAUKRI_PASSWORD: str = os.getenv("NAUKRI_PASSWORD", "")
+GMAIL_APP_PASSWORD: str = os.getenv("GMAIL_APP_PASSWORD", "")
 
 # URLs
 NAUKRI_BASE_URL = "https://www.naukri.com"
