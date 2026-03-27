@@ -1,5 +1,7 @@
 import logging
 import os
+import shutil
+from pathlib import Path
 from playwright.sync_api import Page
 from config.settings import NAUKRI_PROFILE_URL
 from services.locators.naukri_locators import ProfileLocators
@@ -14,7 +16,9 @@ _TEST_SUMMARY = (
     "cloud infrastructure, and automation. Passionate about building scalable, "
     "maintainable systems and delivering high-quality software solutions."
 )
-_RESUME_FILENAME = "resume.pdf"
+_RESUME_DIR      = Path(__file__).parent.parent.parent / "resume_code" / "resume"
+_RESUME_GENERATED = _RESUME_DIR / "resume_generated.pdf"
+_RESUME_FALLBACK  = Path(__file__).parent.parent.parent / "resume.pdf"
 _RESUME_UPLOAD_NAME = "RomeshJain_SoftwareEngineer_Resume.pdf"
 
 
@@ -29,7 +33,7 @@ class ProfileService:
     def update(self):
         """Navigate to profile page and update headline, summary, and resume."""
         self._go_to_profile()
-        self._upload_resume(_RESUME_FILENAME)
+        self._upload_resume()
         self._update_headline(_TEST_HEADLINE)
         self._close_modal_if_present()
         self._update_summary(_TEST_SUMMARY)
@@ -113,11 +117,26 @@ class ProfileService:
         )
         logger.info("Profile summary updated")
 
-    def _upload_resume(self, filename: str):
-        logger.info("Uploading resume: %s", filename)
+    def _upload_resume(self):
+        logger.info("Preparing resume for upload...")
 
-        resume_path = os.path.join(os.getcwd(), filename)
-        if not os.path.isfile(resume_path):
+        # Try to generate a fresh AI resume; fall back to resume.pdf on any failure
+        generated = False
+        try:
+            from resume_code.generate_resume import generate_resume
+            generate_resume()
+            generated = True
+            logger.info("AI resume generated successfully")
+        except Exception as exc:
+            logger.warning("Resume generation failed (%s) — falling back to resume.pdf", exc)
+
+        if generated and _RESUME_GENERATED.is_file():
+            resume_path = _RESUME_GENERATED
+        else:
+            resume_path = _RESUME_FALLBACK
+            logger.info("Using fallback resume: %s", resume_path)
+
+        if not resume_path.is_file():
             raise FileNotFoundError("Resume file not found at: %s" % resume_path)
 
         self.page.evaluate("window.scrollTo(0, 0)")
@@ -142,3 +161,8 @@ class ProfileService:
 
         self.page.wait_for_timeout(4000)
         logger.info("Resume uploaded successfully")
+
+        # Delete the entire resume_code/resume/ folder after upload — regenerated fresh daily
+        if _RESUME_DIR.exists():
+            shutil.rmtree(_RESUME_DIR)
+            logger.info("Deleted resume output folder: %s", _RESUME_DIR)

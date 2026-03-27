@@ -7,6 +7,7 @@ load_dotenv()
 NAUKRI_EMAIL: str = os.getenv("NAUKRI_EMAIL", "")
 NAUKRI_PASSWORD: str = os.getenv("NAUKRI_PASSWORD", "")
 GMAIL_APP_PASSWORD: str = os.getenv("GMAIL_APP_PASSWORD", "")
+GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
 
 # URLs
 NAUKRI_BASE_URL = "https://www.naukri.com"

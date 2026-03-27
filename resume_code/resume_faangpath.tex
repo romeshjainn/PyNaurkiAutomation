@@ -1,0 +1,115 @@
+%% Compile with: pdflatex resume_romesh.tex  (run twice)
+\documentclass{resume}
+\begin{document}
+
+%% HEADER
+\resumeheader
+  {Romesh Jain}
+  {Software Engineer · React.js · Next.js · React Native · Node.js · AI-Augmented Full-Stack Development}
+  {+91-9516949156}
+  {romeshjainofficial@gmail.com}
+  {https://linkedin.com/in/romeshjain/}
+  {https://github.com/romeshjainn}
+  {https://romeshjain.netlify.app/}
+\vspace{3pt}
+
+%% TECHNICAL SKILLS
+\section{Technical Skills}
+
+\begin{tabular}{@{} p{2.0cm} p{14.6cm} @{}}
+  \skillrow{Languages}{JavaScript (ES6+), TypeScript}
+  \skillrow{Frontend}{React.js, Next.js (SSR/SSG/ISR), Redux Toolkit, Tailwind CSS, NativeWind, HTML5, CSS3, Formik, Yup}
+  \skillrow{Mobile}{React Native, Ionic Capacitor, Android Deployment, Biometric Auth, Offline Caching}
+  \skillrow{Backend}{Node.js, Express.js, REST APIs, JWT, Firebase (Auth, FCM, Firestore), WebSockets}
+  \skillrow{Integrations}{Stripe, Google Maps API, Calendly, OneSignal, Social Login (OAuth 2.0)}
+  \skillrow{Tools \& Ops}{Git, GitHub, Postman, Swagger, Vercel, Netlify, Figma, CI/CD, Agile/Scrum}
+  \skillrow{AI \& Dev}{Claude, GitHub Copilot, Antigravity IDE, Ollama (Local LLMs), Prompt Engineering,}
+  \skillcont{LLM-driven scaffolding, AI-assisted code review \& debugging, AI development workflows}
+\end{tabular}
+
+%% PROFESSIONAL EXPERIENCE
+\section{Professional Experience}
+
+\companyheader{DigiMonk Technologies}{https://digimonk.in}{Gwalior, India}
+
+\roleentry{Software Engineer}{Jan 2026 -- Present}
+\begin{itemize}
+  \item Architected multi-tier RBAC admin panels (super-admin, clinician, content-admin) across 3 production apps; leveraged AI-assisted code generation (Copilot + Claude) to produce \textbf{\textasciitilde70\% of scaffold \& boilerplate code}, significantly accelerating feature delivery by adopting generative AI throughout the development cycle.
+  \item Built real-time chat + push notification system via WebSockets and Firebase FCM, improving response times and measurably boosting user engagement across apps.
+  \item Improved Lighthouse performance scores through Next.js code-splitting, lazy loading, and image optimisation on high-traffic dashboards.
+\end{itemize}
+
+\vspace{1pt}
+
+\roleentry{Associate Software Engineer}{Dec 2024 -- Jan 2026}
+\begin{itemize}
+  \item Engineered a shared React.js / React Native component library adopted across 4+ apps, eliminating code duplication and significantly accelerating delivery across new project sprints.
+  \item Delivered data-heavy dashboards with SSR pagination, debounced search, and infinite scroll -- handling large record sets with zero observable lag across multiple production apps.
+  \item Integrated Stripe, Google Maps API, Firebase Auth, and OneSignal across 5 projects with zero post-launch regression incidents.
+\end{itemize}
+
+\vspace{1pt}
+
+\roleentry{Graduate Trainee}{Apr 2024 -- Dec 2024}
+\begin{itemize}
+  \item Contributed production-ready components from sprint one; systematic layout audits and cross-browser testing reduced the UI bug backlog; fully onboarded into Git branching, CI/CD, and PR review workflows within the first month.
+\end{itemize}
+
+\vspace{2pt}
+
+\companyheader{InOffice Labs}{}{Remote}
+
+\roleentry{Web Developer Intern}{Oct 2023 -- Mar 2024}
+\begin{itemize}
+  \item Built and maintained pixel-perfect, reusable React.js components from Figma mockups; adopted product-wide with no rework required.
+\end{itemize}
+
+%% KEY PROJECTS
+\section{Key Projects}
+
+\projectentry{PROTOCOL -- Health-Tech Diagnostics Platform}{Next.js · Redux · Stripe · Calendly API · REST APIs}
+\begin{itemize}
+  \item AI-driven patient dashboards with biomarker scores; integrated Stripe subscriptions and Calendly booking flows, reducing manual operations overhead significantly.
+\end{itemize}
+
+\vspace{1pt}
+
+\projectentry{AI-Powered LMS [\href{https://github.com/romeshjainn/lms-app}{\underline{GitHub}}]}{React Native · Node.js · LLM Integration · AI-Augmented Development}
+\begin{itemize}
+  \item Fully functional LMS featuring biometric auth, AI learning assistant, offline caching, and push notifications -- \textbf{100\% built using AI-assisted development} (Claude + Copilot) in just \textbf{3 days} alongside a full-time job, showcasing extreme AI-augmented development velocity.
+\end{itemize}
+
+\vspace{1pt}
+
+\projectentry{SAHEL -- Service Booking Platform}{Next.js · React Native · Redux · Firebase · WebSockets · Node.js}
+\begin{itemize}
+  \item Cross-platform app (mobile + web admin) with real-time technician dispatch, multi-tier RBAC, and FCM notifications segmented by city and schedule; shipped ahead of deadline using AI-assisted scaffolding.
+\end{itemize}
+
+\vspace{1pt}
+
+\projectentry{SuprFind -- Local Business Listing Platform}{Next.js · Redux · Google Maps API}
+\begin{itemize}
+  \item Advertiser and admin panels featuring Google Maps geo-search, pin-drop, and analytics tracking impressions, visits, and calls at scale.
+\end{itemize}
+
+%% ACHIEVEMENTS & CERTIFICATIONS
+\section{Achievements \& Certifications}
+
+\begin{itemize}
+  \item Anthropic Certifications: \href{https://verify.skilljar.com/c/738qqbw7mdzg}{\underline{Claude 101}}, \href{https://verify.skilljar.com/c/y7sjp6gizmbk}{\underline{Claude Code in Action}}, \href{https://verify.skilljar.com/c/yhi5c9jiyomj}{\underline{Introduction to Agent Skills}}
+  \item Be10X: \href{https://certx.in/certificate/0270772f-3809-4400-b29b-1e1c61cd09971132989}{\underline{AI Tools Workshop}}
+  \item Promoted Trainee $\to$ Associate $\to$ Software Engineer in \textbf{21 months} -- fastest in the team, driven by consistent delivery quality and AI-augmented output.
+  \item Velotio Weekly LinkedIn Quiz Winner -- recognised among top respondents for technical accuracy.
+\end{itemize}
+
+%% EDUCATION
+\section{Education}
+
+\eduentry
+  {Bachelor of Computer Applications (BCA)}
+  {Makhanlal Chaturvedi University, Gwalior}
+  {Jun 2020 -- Jun 2023}
+  {CGPA: 7.67/10.0 \quad|\quad Data Structures \& Algorithms, Operating Systems, Software Engineering}
+
+\end{document}

@@ -18,7 +18,19 @@
       "Bash(.venv/Scripts/playwright install:*)",
       "Bash(.venv/Scripts/python main.py)",
       "Bash(.venv/Scripts/python -c \":*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(winget install:*)",
+      "Bash(powershell -Command \"Invoke-WebRequest -Uri 'https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.15.0/tectonic-0.15.0-x86_64-pc-windows-msvc.zip' -OutFile 'C:/tectonic.zip'; Expand-Archive -Path 'C:/tectonic.zip' -DestinationPath 'C:/tectonic' -Force; echo 'Done'\" 2>&1)",
+      "Bash(powershell -Command \"Invoke-WebRequest -Uri 'https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.15.0/tectonic-0.15.0-x86_64-pc-windows-msvc.zip' -OutFile '$env:TEMP/tectonic.zip'; Expand-Archive -Path '$env:TEMP/tectonic.zip' -DestinationPath '$env:TEMP/tectonic' -Force; echo 'Done'\" 2>&1)",
+      "Bash(powershell -Command \"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; \\(New-Object Net.WebClient\\).DownloadFile\\('https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.15.0/tectonic-0.15.0-x86_64-pc-windows-msvc.zip', 'E:\\\\\\\\Projects\\\\\\\\PyNaurkiAutomation\\\\\\\\tectonic.zip'\\); Expand-Archive -Path 'E:\\\\\\\\Projects\\\\\\\\PyNaurkiAutomation\\\\\\\\tectonic.zip' -DestinationPath 'E:\\\\\\\\Projects\\\\\\\\PyNaurkiAutomation\\\\\\\\tectonic_bin' -Force; Write-Host Done\" 2>&1)",
+      "Bash(where cargo:*)",
+      "Bash(rustup show:*)",
+      "Bash(py -3.10 --version)",
+      "Bash(python resume_code/generate_resume.py)",
+      "Bash(python -c \":*)",
+      "Bash(playwright install:*)",
+      "Bash(py:*)",
+      "Bash(.venv/Scripts/python --version)"
     ]
   }
 }
