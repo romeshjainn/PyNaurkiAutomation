@@ -10,7 +10,15 @@
       "Bash(py -3.11 --version)",
       "Bash(py -3.13 -m pip install -r requirements.txt)",
       "Bash(py -3.13 -m playwright install chromium)",
-      "Bash(py -3.13 main.py)"
+      "Bash(py -3.13 main.py)",
+      "Bash(python main.py)",
+      "Bash(pip index:*)",
+      "Bash(py -3.13 -m venv .venv)",
+      "Bash(.venv/Scripts/pip install:*)",
+      "Bash(.venv/Scripts/playwright install:*)",
+      "Bash(.venv/Scripts/python main.py)",
+      "Bash(.venv/Scripts/python -c \":*)",
+      "Bash(ls:*)"
     ]
   }
 }

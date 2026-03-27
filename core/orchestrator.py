@@ -1,6 +1,7 @@
 import logging
 from services.browser.browser_service import BrowserService
 from services.auth.login_service import LoginService
+from services.profile.profile_service import ProfileService
 
 logger = logging.getLogger(__name__)
 
@@ -20,8 +21,10 @@ class Orchestrator:
             LoginService(page).ensure_logged_in()
             logger.info("On profile page: %s", page.url)
 
+            # Step 2: Update profile — headline, summary, resume
+            ProfileService(page).update()
+
             # Future steps will be added here:
-            # ProfileService(page).update()
             # JobService(page).apply_daily()
 
         except Exception as e:

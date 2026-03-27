@@ -70,17 +70,32 @@ class OTPLocators:
     ]
 
 
-# ── Planned — added as services are built ────────────────────────────────────
+class ProfileLocators:
+    """Selectors for the profile update widgets."""
 
-# class ProfileLocators:
-#     HEADLINE_EDIT   = ".widgetHead:has(.widgetTitle:text('Resume headline')) span.edit.icon"
-#     HEADLINE_FORM   = "form[name='resumeHeadlineForm']"
-#     HEADLINE_INPUT  = "textarea#resumeHeadlineTxt"
-#     HEADLINE_SAVE   = "form[name='resumeHeadlineForm'] button.btn-dark-ot"
-#
-#     SUMMARY_EDIT    = ".widgetHead:has(.widgetTitle:text('Profile summary')) span.edit.icon"
-#     SUMMARY_FORM    = "form[name='profileSummaryForm']"
-#     SUMMARY_INPUT   = "textarea#profileSummaryTxt"
-#     SUMMARY_SAVE    = "form[name='profileSummaryForm'] button.btn-dark-ot"
-#
-#     RESUME_UPLOAD   = "input.dummyUpload"
+    # ── Resume Headline ───────────────────────────────────────────────────────
+    HEADLINE_EDIT = [
+        ".widgetHead:has(.widgetTitle:text('Resume headline')) span.edit.icon",
+        ".widgetHead:has(.widgetTitle:text('Resume Headline')) span.edit.icon",
+    ]
+    HEADLINE_FORM = "form[name='resumeHeadlineForm']"
+    HEADLINE_INPUT = ["textarea#resumeHeadlineTxt"]
+    HEADLINE_SAVE = ["form[name='resumeHeadlineForm'] button.btn-dark-ot"]
+
+    # ── Profile Summary ───────────────────────────────────────────────────────
+    SUMMARY_EDIT = [
+        ".widgetHead:has(.widgetTitle:text('Profile summary')) span.edit.icon",
+        ".widgetHead:has(.widgetTitle:text('Profile Summary')) span.edit.icon",
+    ]
+    SUMMARY_FORM = "form[name='profileSummaryForm']"
+    SUMMARY_INPUT = ["textarea#profileSummaryTxt"]
+    SUMMARY_SAVE = ["form[name='profileSummaryForm'] button.btn-dark-ot"]
+
+    # ── Resume Upload ─────────────────────────────────────────────────────────
+    RESUME_UPLOAD = ["input#attachCV", "input.fileUpload"]
+
+    # ── Resume Replace Confirmation ───────────────────────────────────────────
+    RESUME_CONFIRM = [
+        ".res360editconfirmationBox a.btn-dark-ot",
+        ".res360editconfirmationBox button.btn-dark-ot",
+    ]
