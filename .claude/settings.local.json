@@ -30,7 +30,8 @@
       "Bash(python -c \":*)",
       "Bash(playwright install:*)",
       "Bash(py:*)",
-      "Bash(.venv/Scripts/python --version)"
+      "Bash(.venv/Scripts/python --version)",
+      "Bash(.venv/Scripts/python resume_code/generate_resume.py)"
     ]
   }
 }

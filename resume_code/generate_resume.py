@@ -142,6 +142,11 @@ def generate_resume() -> str:
     for char, placeholder in _CHAR_MAP:
         updated_tex = updated_tex.replace(placeholder, char)
 
+    # Sanitize known LLM hallucinations in LaTeX environment names
+    import re as _re
+    updated_tex = _re.sub(r"\\begin\{item[^}]*\}", r"\\begin{itemize}", updated_tex)
+    updated_tex = _re.sub(r"\\end\{item[^}]*\}",   r"\\end{itemize}",   updated_tex)
+
     logger.info("AI response received — compiling PDF...")
     return _compile_to_pdf(updated_tex)
 
@@ -173,7 +178,8 @@ def _compile_to_pdf(tex_content: str) -> str:
         if not pdf_path.exists():
             raise RuntimeError(
                 "tectonic did not produce a PDF.\n"
-                + result.stdout[-3000:]
+                + result.stdout[-2000:]
+                + result.stderr[-2000:]
             )
 
         pages = _count_pages(pdf_path)

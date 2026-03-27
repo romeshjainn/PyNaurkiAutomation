@@ -9,13 +9,7 @@ from core.utils import try_selectors
 
 logger = logging.getLogger(__name__)
 
-# ── Hardcoded test content (replace with profile.json values later) ───────────
-_TEST_HEADLINE = "Software Engineer | Python | Cloud | Automation"
-_TEST_SUMMARY = (
-    "Experienced software engineer with a strong background in Python development, "
-    "cloud infrastructure, and automation. Passionate about building scalable, "
-    "maintainable systems and delivering high-quality software solutions."
-)
+from services.profile.content_generator import generate_headline_and_summary
 _RESUME_DIR      = Path(__file__).parent.parent.parent / "resume_code" / "resume"
 _RESUME_GENERATED = _RESUME_DIR / "resume_generated.pdf"
 _RESUME_FALLBACK  = Path(__file__).parent.parent.parent / "resume.pdf"
@@ -33,10 +27,12 @@ class ProfileService:
     def update(self):
         """Navigate to profile page and update headline, summary, and resume."""
         self._go_to_profile()
+        current_headline, current_summary = self._scrape_current_headline_and_summary()
         self._upload_resume()
-        self._update_headline(_TEST_HEADLINE)
+        headline, summary = generate_headline_and_summary(current_headline, current_summary)
+        self._update_headline(headline)
         self._close_modal_if_present()
-        self._update_summary(_TEST_SUMMARY)
+        self._update_summary(summary)
         self._close_modal_if_present()
 
     # ── Private ───────────────────────────────────────────────────────────────
@@ -46,6 +42,60 @@ class ProfileService:
             self.page.goto(NAUKRI_PROFILE_URL, wait_until="domcontentloaded")
         self.page.wait_for_timeout(3000)
         logger.info("On profile page — widgets loaded")
+
+    def _scrape_current_headline_and_summary(self) -> tuple[str, str]:
+        """Read current headline and summary by opening each edit form, reading the
+        textarea value, then cancelling — guarantees exact live content with no
+        dependency on read-only display selectors."""
+        headline = self._read_field_via_edit_form(
+            edit_trigger_selectors=ProfileLocators.HEADLINE_EDIT,
+            form_selector=ProfileLocators.HEADLINE_FORM,
+            textarea_selector=ProfileLocators.HEADLINE_INPUT[0],
+            label="headline",
+        )
+        summary = self._read_field_via_edit_form(
+            edit_trigger_selectors=ProfileLocators.SUMMARY_EDIT,
+            form_selector=ProfileLocators.SUMMARY_FORM,
+            textarea_selector=ProfileLocators.SUMMARY_INPUT[0],
+            label="summary",
+        )
+        return headline, summary
+
+    def _read_field_via_edit_form(
+        self,
+        edit_trigger_selectors: list,
+        form_selector: str,
+        textarea_selector: str,
+        label: str,
+    ) -> str:
+        """Open an edit form, read the textarea value, cancel, return the value."""
+        try:
+            # Scroll down incrementally until the edit trigger is visible
+            edit_btn = None
+            for _ in range(20):
+                edit_btn = try_selectors(self.page, edit_trigger_selectors, timeout=1000)
+                if edit_btn:
+                    break
+                self.page.evaluate("window.scrollBy(0, 400)")
+                self.page.wait_for_timeout(300)
+            if not edit_btn:
+                logger.warning("Could not find edit trigger for %s — skipping scrape", label)
+                return ""
+            edit_btn.click()
+            self.page.wait_for_selector(form_selector, timeout=5000)
+            value = self.page.locator(textarea_selector).input_value()
+            # Cancel the form without saving
+            self.page.keyboard.press("Escape")
+            try:
+                self.page.wait_for_selector(form_selector, state="hidden", timeout=4000)
+            except Exception:
+                pass
+            self._close_modal_if_present()
+            logger.info("Scraped current %s (%d chars)", label, len(value))
+            return value.strip()
+        except Exception as exc:
+            logger.warning("Could not scrape current %s: %s", label, exc)
+            return ""
 
     def _close_modal_if_present(self):
         """Dismiss the crossLayer confirmation modal that appears after saves."""
