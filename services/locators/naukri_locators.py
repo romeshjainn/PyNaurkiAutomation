@@ -198,6 +198,8 @@ class ProfileLocators:
         "[data-section='headline'] .para",
     ]
     HEADLINE_EDIT = [
+        "#lazyResumeHead .widgetHead span.edit.icon",
+        ".resumeHeadline .widgetHead span.edit.icon",
         ".widgetHead:has(.widgetTitle:text('Resume headline')) span.edit.icon",
         ".widgetHead:has(.widgetTitle:text('Resume Headline')) span.edit.icon",
     ]
@@ -213,12 +215,12 @@ class ProfileLocators:
         "[data-section='summary'] .para",
     ]
     SUMMARY_EDIT = [
+        "#lazyProfileSummary .widgetHead span.edit.icon",
+        ".profileSummary .widgetHead span.edit.icon",
         ".widgetHead:has(.widgetTitle:text('Profile summary')) span.edit.icon",
         ".widgetHead:has(.widgetTitle:text('Profile Summary')) span.edit.icon",
         ".widgetHead:has-text('Profile summary') span.edit.icon",
         ".widgetHead:has-text('Profile Summary') span.edit.icon",
-        "span.edit.icon[title='Edit profile summary']",
-        "span.edit.icon[title='Edit Profile Summary']",
     ]
     SUMMARY_FORM = "form[name='profileSummaryForm']"
     SUMMARY_INPUT = ["textarea#profileSummaryTxt"]

@@ -3,5 +3,11 @@ session.json
 __pycache__/
 *.pyc
 *.pyo
-logs/app.log
+logs/
 .playwright/
+data/jobs.db-shm
+data/jobs.db-wal
+data/last_resume.pdf
+resume_code/resume/
+tectonic_bin/
+.claude/

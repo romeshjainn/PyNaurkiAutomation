@@ -31,7 +31,7 @@ logger = logging.getLogger(__name__)
 
 # ── Test mode ──────────────────────────────────────────────────────────────────
 # Set to True to run a quick 2-job test with all delays stripped out.
-TEST_MODE = True
+TEST_MODE = False
 
 # ── Session limits ─────────────────────────────────────────────────────────────
 MORNING_TARGET   = (4, 7)   # (min, max) applications — total daily goal 7–12

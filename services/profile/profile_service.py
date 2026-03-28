@@ -107,7 +107,12 @@ class ProfileService:
     def _go_to_profile(self):
         if not self.page.url.startswith(NAUKRI_PROFILE_URL):
             self.page.goto(NAUKRI_PROFILE_URL, wait_until="domcontentloaded")
-        self.page.wait_for_timeout(3000)
+        # Wait for the resume headline widget to appear (React lazy-renders the profile)
+        try:
+            self.page.wait_for_selector("#lazyResumeHead, .resumeHeadline", timeout=15000)
+        except Exception:
+            pass
+        self.page.wait_for_timeout(2000)
         logger.info("On profile page — widgets loaded")
 
     def _scrape_current_headline_and_summary(self) -> tuple[str, str]:
@@ -137,18 +142,33 @@ class ProfileService:
     ) -> str:
         """Open an edit form, read the textarea value, cancel, return the value."""
         try:
-            # Scroll down incrementally until the edit trigger is visible
-            edit_btn = None
-            for _ in range(20):
-                edit_btn = try_selectors(self.page, edit_trigger_selectors, timeout=1000)
-                if edit_btn:
+            # Scroll down incrementally until the section container is in view,
+            # then hover to reveal the hidden edit icon, then force-click it.
+            clicked = False
+            for _ in range(30):
+                for sel in edit_trigger_selectors:
+                    try:
+                        loc = self.page.locator(sel).first
+                        # Scroll to it (works even if CSS-hidden)
+                        loc.scroll_into_view_if_needed(timeout=1000)
+                        # Hover parent widgetHead to trigger CSS hover state
+                        try:
+                            loc.locator("xpath=ancestor::div[contains(@class,'widgetHead')]").first.hover(timeout=1000)
+                        except Exception:
+                            pass
+                        self.page.wait_for_timeout(200)
+                        loc.click(force=True)
+                        clicked = True
+                        break
+                    except Exception:
+                        continue
+                if clicked:
                     break
                 self.page.evaluate("window.scrollBy(0, 400)")
                 self.page.wait_for_timeout(300)
-            if not edit_btn:
+            if not clicked:
                 logger.warning("Could not find edit trigger for %s — skipping scrape", label)
                 return ""
-            edit_btn.click()
             self.page.wait_for_selector(form_selector, timeout=5000)
             value = self.page.locator(textarea_selector).input_value()
             # Cancel the form without saving
@@ -176,10 +196,23 @@ class ProfileService:
     def _update_headline(self, headline: str):
         logger.info("Updating resume headline...")
 
-        edit_btn = try_selectors(self.page, ProfileLocators.HEADLINE_EDIT, timeout=5000)
-        if not edit_btn:
+        clicked = False
+        for sel in ProfileLocators.HEADLINE_EDIT:
+            try:
+                loc = self.page.locator(sel).first
+                loc.scroll_into_view_if_needed(timeout=3000)
+                try:
+                    loc.locator("xpath=ancestor::div[contains(@class,'widgetHead')]").first.hover(timeout=1000)
+                except Exception:
+                    pass
+                self.page.wait_for_timeout(200)
+                loc.click(force=True)
+                clicked = True
+                break
+            except Exception:
+                continue
+        if not clicked:
             raise RuntimeError("Resume headline edit trigger not found")
-        edit_btn.click()
 
         self.page.wait_for_selector(ProfileLocators.HEADLINE_FORM, timeout=5000)
 
@@ -201,21 +234,28 @@ class ProfileService:
     def _update_summary(self, summary: str):
         logger.info("Updating profile summary...")
 
-        # Scroll down in steps until the summary widget is visible
-        edit_btn = (
-            self.page.locator(".widgetHead")
-            .filter(has_text="Profile summary")
-            .locator("span.edit.icon")
-        )
-        for _ in range(20):
-            if edit_btn.is_visible():
-                break
+        # Scroll down to trigger lazy load of #lazyProfileSummary, then force-click edit icon
+        for _ in range(30):
             self.page.evaluate("window.scrollBy(0, 400)")
             self.page.wait_for_timeout(400)
+            for sel in ProfileLocators.SUMMARY_EDIT:
+                try:
+                    loc = self.page.locator(sel).first
+                    loc.scroll_into_view_if_needed(timeout=500)
+                    try:
+                        loc.locator("xpath=ancestor::div[contains(@class,'widgetHead')]").first.hover(timeout=500)
+                    except Exception:
+                        pass
+                    self.page.wait_for_timeout(200)
+                    loc.click(force=True)
+                    break
+                except Exception:
+                    continue
+            else:
+                continue
+            break
         else:
             raise RuntimeError("Profile summary widget not found after scrolling")
-
-        edit_btn.click()
 
         self.page.wait_for_selector(ProfileLocators.SUMMARY_FORM, timeout=5000)
 
@@ -265,11 +305,14 @@ class ProfileService:
             raise RuntimeError("Resume upload input not found")
 
         with open(resume_path, "rb") as f:
-            upload_input.set_input_files({
-                "name": _RESUME_UPLOAD_NAME,
-                "mimeType": "application/pdf",
-                "buffer": f.read(),
-            })
+            upload_input.set_input_files(
+                {
+                    "name": _RESUME_UPLOAD_NAME,
+                    "mimeType": "application/pdf",
+                    "buffer": f.read(),
+                },
+                force=True,  # input#attachCV has disabled attr, force bypasses it
+            )
 
         # Confirm the "replace resume" dialog if it appears
         confirm = try_selectors(self.page, ProfileLocators.RESUME_CONFIRM, timeout=5000)

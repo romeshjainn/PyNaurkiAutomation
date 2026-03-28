@@ -37,12 +37,18 @@ class LoginService:
         """
         self.page.goto(NAUKRI_PROFILE_URL, wait_until="domcontentloaded")
 
-        if self.page.url.startswith(NAUKRI_PROFILE_URL):
+        page_text = self.page.content()
+        if self.page.url.startswith(NAUKRI_PROFILE_URL) and "Access Denied" not in page_text:
             logger.info("Session active — already on profile page")
             return
 
         logger.info("Session invalid — navigating to login page")
-        self.page.goto(NAUKRI_LOGIN_URL, wait_until="domcontentloaded")
+        self.page.goto(NAUKRI_LOGIN_URL, wait_until="networkidle")
+        # Wait for the login form to be rendered (JS-hydrated page)
+        try:
+            self.page.wait_for_selector("input#usernameField", state="visible", timeout=15000)
+        except Exception:
+            pass
         self._fill_and_submit()
 
     # ── Private ───────────────────────────────────────────────────────────────
