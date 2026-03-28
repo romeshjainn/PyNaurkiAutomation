@@ -1,6 +1,5 @@
 import logging
 import os
-import shutil
 from pathlib import Path
 from playwright.sync_api import Page
 from config.settings import NAUKRI_PROFILE_URL
@@ -222,22 +221,7 @@ class ProfileService:
             logger.debug("Confirmed resume replacement")
 
         self.page.wait_for_timeout(4000)
-        logger.info("Resume uploaded successfully")
+        logger.info("Resume uploaded successfully — keeping file at %s for email attachment", resume_path)
 
-        # Save a copy for the daily email report before deleting the generated folder
-        email_copy: str | None = None
-        try:
-            copy_dest = Path("data") / "last_resume.pdf"
-            copy_dest.parent.mkdir(exist_ok=True)
-            shutil.copy2(resume_path, copy_dest)
-            email_copy = str(copy_dest)
-            logger.info("Resume copy saved for email: %s", email_copy)
-        except Exception as exc:
-            logger.warning("Could not save resume copy for email: %s", exc)
-
-        # Delete the entire resume_code/resume/ folder after upload — regenerated fresh daily
-        if _RESUME_DIR.exists():
-            shutil.rmtree(_RESUME_DIR)
-            logger.info("Deleted resume output folder: %s", _RESUME_DIR)
-
-        return email_copy
+        # Return the path as-is — deletion happens in the scheduler after the email is sent
+        return str(resume_path)

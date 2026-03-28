@@ -13,9 +13,11 @@ Usage:
 
 import logging
 import random
+import shutil
 import time
 import traceback
 from datetime import datetime, timedelta
+from pathlib import Path
 
 from services.browser.browser_service import BrowserService
 from services.auth.login_service import LoginService
@@ -76,6 +78,26 @@ def _wait_until(target: datetime):
         else:
             time.sleep(remaining)
             return
+
+
+def _cleanup_resume(resume_path: str | None):
+    """Delete the generated resume file and its output folder after email is sent."""
+    _RESUME_DIR = Path("resume_code") / "resume"
+    try:
+        if _RESUME_DIR.exists():
+            shutil.rmtree(_RESUME_DIR)
+            logger.info("Deleted resume output folder: %s", _RESUME_DIR)
+    except Exception as e:
+        logger.warning("Could not delete resume folder: %s", e)
+
+    if resume_path:
+        try:
+            p = Path(resume_path)
+            if p.exists():
+                p.unlink()
+                logger.info("Deleted resume file: %s", resume_path)
+        except Exception as e:
+            logger.warning("Could not delete resume file %s: %s", resume_path, e)
 
 
 def _run_session(session_type: str, daily_report: dict) -> list[str]:
@@ -161,6 +183,9 @@ def run_scheduler():
         except Exception as e:
             logger.error("Failed to send daily report: %s", e)
         finally:
+            # Delete resume files AFTER email is sent — generated folder + any fallback copy
+            _cleanup_resume(daily_report.get("resume_path"))
+
             # Purge non-applied rows — keep only applied history for dedup
             try:
                 store.purge_non_applied()
