@@ -24,16 +24,27 @@ class ProfileService:
 
     # ── Public ────────────────────────────────────────────────────────────────
 
-    def update(self):
-        """Navigate to profile page and update headline, summary, and resume."""
+    def update(self) -> dict:
+        """Navigate to profile page and update headline, summary, and resume.
+
+        Returns a dict with before/after values for the daily report:
+            prev_headline, new_headline, prev_summary, new_summary, resume_path
+        """
         self._go_to_profile()
         current_headline, current_summary = self._scrape_current_headline_and_summary()
-        self._upload_resume()
+        resume_path = self._upload_resume()
         headline, summary = generate_headline_and_summary(current_headline, current_summary)
         self._update_headline(headline)
         self._close_modal_if_present()
         self._update_summary(summary)
         self._close_modal_if_present()
+        return {
+            "prev_headline": current_headline,
+            "new_headline":  headline,
+            "prev_summary":  current_summary,
+            "new_summary":   summary,
+            "resume_path":   resume_path,
+        }
 
     # ── Private ───────────────────────────────────────────────────────────────
 
@@ -167,7 +178,8 @@ class ProfileService:
         )
         logger.info("Profile summary updated")
 
-    def _upload_resume(self):
+    def _upload_resume(self) -> str | None:
+        """Upload resume to Naukri and return the local path saved for email attachment."""
         logger.info("Preparing resume for upload...")
 
         # Try to generate a fresh AI resume; fall back to resume.pdf on any failure
@@ -212,7 +224,20 @@ class ProfileService:
         self.page.wait_for_timeout(4000)
         logger.info("Resume uploaded successfully")
 
+        # Save a copy for the daily email report before deleting the generated folder
+        email_copy: str | None = None
+        try:
+            copy_dest = Path("data") / "last_resume.pdf"
+            copy_dest.parent.mkdir(exist_ok=True)
+            shutil.copy2(resume_path, copy_dest)
+            email_copy = str(copy_dest)
+            logger.info("Resume copy saved for email: %s", email_copy)
+        except Exception as exc:
+            logger.warning("Could not save resume copy for email: %s", exc)
+
         # Delete the entire resume_code/resume/ folder after upload — regenerated fresh daily
         if _RESUME_DIR.exists():
             shutil.rmtree(_RESUME_DIR)
             logger.info("Deleted resume output folder: %s", _RESUME_DIR)
+
+        return email_copy

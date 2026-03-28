@@ -14,11 +14,15 @@ Usage:
 import logging
 import random
 import time
+import traceback
 from datetime import datetime, timedelta
 
 from services.browser.browser_service import BrowserService
 from services.auth.login_service import LoginService
 from services.jobs.job_session import JobSession
+from services.jobs.job_store import JobStore
+from services.notifier.email_service import EmailService
+from services.profile.profile_service import ProfileService
 
 logger = logging.getLogger(__name__)
 
@@ -74,22 +78,45 @@ def _wait_until(target: datetime):
             return
 
 
-def _run_session(session_type: str):
-    """Launch browser, log in, run the requested session, then close."""
-    browser = BrowserService()
-    page    = browser.launch()
-    session = JobSession(page)
+def _run_session(session_type: str, daily_report: dict) -> list[str]:
+    """Launch browser, log in, run profile update (morning only) + job session.
+
+    Returns a list of error strings encountered during this session.
+    """
+    errors: list[str] = []
+    email_svc = EmailService()
+    browser   = BrowserService()
+    page      = browser.launch()
+    session   = JobSession(page)
     try:
         LoginService(page).ensure_logged_in()
+
+        # Morning session also updates the profile and captures before/after data
+        if session_type == "morning":
+            try:
+                profile_data = ProfileService(page).update()
+                daily_report.update(profile_data)
+            except Exception as e:
+                err = f"Profile update failed: {traceback.format_exc()}"
+                logger.error(err)
+                errors.append(err)
+                email_svc.send_error_alert("Profile update failed", traceback.format_exc())
+
         if session_type == "morning":
             session.run_morning_session()
         else:
             session.run_afternoon_session()
+
     except Exception as e:
-        logger.error("Session '%s' failed: %s", session_type, e, exc_info=True)
+        err = f"{session_type.capitalize()} session crashed: {traceback.format_exc()}"
+        logger.error(err)
+        errors.append(err)
+        email_svc.send_error_alert(f"{session_type.capitalize()} session crashed", traceback.format_exc())
     finally:
         session.close()
         browser.close()
+
+    return errors
 
 
 def run_scheduler():
@@ -106,13 +133,40 @@ def run_scheduler():
             afternoon_time.strftime("%Y-%m-%d %H:%M"),
         )
 
+        today        = datetime.now().date().isoformat()
+        daily_report = {"date": today, "errors": []}
+        store        = JobStore()
+        email_svc    = EmailService()
+
+        # ── Morning session ────────────────────────────────────────────────────
         _wait_until(morning_time)
         logger.info("Starting morning session")
-        _run_session("morning")
+        errs = _run_session("morning", daily_report)
+        daily_report["errors"].extend(errs)
 
+        # ── Afternoon session ──────────────────────────────────────────────────
         _wait_until(afternoon_time)
         logger.info("Starting afternoon session")
-        _run_session("afternoon")
+        errs = _run_session("afternoon", daily_report)
+        daily_report["errors"].extend(errs)
+
+        # ── End-of-day report + cleanup ────────────────────────────────────────
+        try:
+            daily_report["applied_jobs"] = store.applied_today_details()
+            email_svc.send_daily_report(daily_report)
+            logger.info(
+                "Daily report sent — %d jobs applied",
+                len(daily_report["applied_jobs"]),
+            )
+        except Exception as e:
+            logger.error("Failed to send daily report: %s", e)
+        finally:
+            # Purge non-applied rows — keep only applied history for dedup
+            try:
+                store.purge_non_applied()
+            except Exception as e:
+                logger.error("Purge failed: %s", e)
+            store.close()
 
         # Sleep a short buffer before the next day's scheduling loop
         time.sleep(60)

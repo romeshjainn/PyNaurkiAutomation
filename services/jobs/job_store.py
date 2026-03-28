@@ -66,6 +66,29 @@ class JobStore:
     def total_applied_today(self) -> int:
         return len(self.applied_today_ids())
 
+    def applied_today_details(self) -> list[dict]:
+        """Return full details for jobs applied today — used in daily report."""
+        today = datetime.now().date().isoformat()
+        rows = self._conn.execute(
+            """SELECT title, company, url, combined_score, applied_at
+               FROM jobs WHERE status='applied' AND applied_at LIKE ?
+               ORDER BY applied_at""",
+            (f"{today}%",),
+        ).fetchall()
+        return [dict(r) for r in rows]
+
+    def purge_non_applied(self):
+        """Delete all rows that were never applied to.
+
+        Applied rows are kept forever — they are the permanent dedup history
+        that prevents re-applying to the same job in future sessions.
+        """
+        deleted = self._conn.execute(
+            "DELETE FROM jobs WHERE status != 'applied'"
+        ).rowcount
+        self._conn.commit()
+        logger.info("Purged %d non-applied rows — applied history preserved", deleted)
+
     # ── Writes ─────────────────────────────────────────────────────────────────
 
     def insert_new(self, job: dict):
