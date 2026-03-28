@@ -1,0 +1,1248 @@
+2026-03-28 09:11:33,378 [DEBUG] asyncio — Using proactor: IocpProactor
+2026-03-28 09:11:34,493 [INFO] services.browser.browser_service — Browser launched (headless=False, session=loaded)
+2026-03-28 09:11:35,274 [INFO] services.auth.login_service — Session active — already on profile page
+2026-03-28 09:11:35,277 [INFO] services.jobs.job_session — === MORNING SESSION START [TEST MODE] ===
+2026-03-28 09:11:35,278 [INFO] services.jobs.job_session — Session target: 2 applications | Already applied today: 0
+2026-03-28 09:11:37,266 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:11:37,894 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:11:48,521 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:11:48,546 [DEBUG] services.jobs.job_scraper — Card parsed: id=160326016044 title=Salesforce Developer
+2026-03-28 09:11:48,586 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:11:48,623 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:11:48,685 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:11:48,721 [DEBUG] services.jobs.job_scraper — Card parsed: id=170326014535 title=Senior Full Stack Developer
+2026-03-28 09:11:48,755 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:11:48,789 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:11:48,826 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:11:48,864 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:11:48,897 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:11:48,936 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:11:48,974 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:11:49,009 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:11:49,046 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:11:49,083 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:11:49,122 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326005441 title=Senior Qa Engineer
+2026-03-28 09:11:49,159 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:11:49,194 [DEBUG] services.jobs.job_scraper — Card parsed: id=260326037460 title=Automation Test Analyst-2nd & 3rd April- Virtual I
+2026-03-28 09:11:49,225 [DEBUG] services.jobs.job_scraper — Card parsed: id=120525010837 title=Generative AI Engineer
+2026-03-28 09:11:49,260 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424001918 title=Full Stack Developer
+2026-03-28 09:11:49,284 [DEBUG] services.jobs.job_scraper — [react] Sorted base URL: https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-developer-react-developer-nextjs-typescript-javascript-jobs?k=react.js%2C%20react%20js%20developer%2C%20react%20js%20frontend%20developer%2C%20react%20developer%2C%20nextjs%2C%20typescript%2C%20javascript&nignbevent_src=jobsearchDeskGNB
+2026-03-28 09:11:49,284 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Salesforce Developer' — blocklisted title term: 'salesforce'
+2026-03-28 09:11:49,284 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:11:49,284 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:11:49,284 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Developer' — exp too senior (max 15.0 yrs)
+2026-03-28 09:11:49,284 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:11:49,284 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:11:49,284 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:11:49,285 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:11:49,285 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:11:49,285 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:11:49,285 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:11:49,285 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:11:49,285 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:11:49,285 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:11:49,286 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Qa Engineer' — blocklisted title term: 'qa engineer'
+2026-03-28 09:11:49,286 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:11:49,286 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Automation Test Analyst-2nd & 3rd April- Virtual Interview- Pan India' — blocklisted title term: 'automation test'
+2026-03-28 09:11:49,286 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Generative AI Engineer' — blocklisted title term: 'ai engineer'
+2026-03-28 09:11:49,286 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:11:49,286 [INFO] services.jobs.job_scraper — [react] Page 1: 1/20 passed — running total: 1
+2026-03-28 09:11:49,286 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:11:52,126 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:11:52,689 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:12:03,299 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:12:03,320 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:12:03,357 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:12:03,424 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:12:03,460 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:12:03,494 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:12:03,527 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:12:03,559 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:12:03,591 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:12:03,625 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:12:03,660 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:12:03,694 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:12:03,725 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:12:03,754 [DEBUG] services.jobs.job_scraper — Card parsed: id=120525010837 title=Generative AI Engineer
+2026-03-28 09:12:03,788 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424001918 title=Full Stack Developer
+2026-03-28 09:12:03,820 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424003255 title=Android Developer
+2026-03-28 09:12:03,851 [DEBUG] services.jobs.job_scraper — Card parsed: id=240725014567 title=Android/IOS Developer
+2026-03-28 09:12:03,881 [DEBUG] services.jobs.job_scraper — Card parsed: id=060326020720 title=Fullstack Developer
+2026-03-28 09:12:03,916 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326019253 title=Senior Java Developer
+2026-03-28 09:12:03,949 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326020674 title=Senior Web Developer
+2026-03-28 09:12:03,983 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000081 title=Java Developer
+2026-03-28 09:12:04,006 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:12:04,006 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:04,006 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:04,006 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:12:04,006 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:12:04,006 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:12:04,006 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Generative AI Engineer' — blocklisted title term: 'ai engineer'
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android Developer' — blocklisted title term: 'android developer'
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android/IOS Developer' — blocklisted title term: 'ios developer'
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — salary too low (1.5 LPA)
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Web Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:12:04,007 [INFO] services.jobs.job_scraper — [react] Page 2: 0/20 passed — running total: 1
+2026-03-28 09:12:04,007 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:12:06,568 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:12:07,251 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:12:17,830 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:12:17,855 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:12:17,965 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:12:18,051 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:12:18,085 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:12:18,120 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:12:18,157 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:12:18,197 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:12:18,231 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:12:18,267 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:12:18,303 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:12:18,338 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:12:18,368 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:12:18,396 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:12:18,428 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424003255 title=Android Developer
+2026-03-28 09:12:18,460 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424001918 title=Full Stack Developer
+2026-03-28 09:12:18,489 [DEBUG] services.jobs.job_scraper — Card parsed: id=120525010837 title=Generative AI Engineer
+2026-03-28 09:12:18,526 [DEBUG] services.jobs.job_scraper — Card parsed: id=240725014567 title=Android/IOS Developer
+2026-03-28 09:12:18,558 [DEBUG] services.jobs.job_scraper — Card parsed: id=060326020720 title=Fullstack Developer
+2026-03-28 09:12:18,592 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326019253 title=Senior Java Developer
+2026-03-28 09:12:18,624 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326020674 title=Senior Web Developer
+2026-03-28 09:12:18,654 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:12:18,654 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:12:18,654 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:18,654 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:18,654 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android Developer' — blocklisted title term: 'android developer'
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Generative AI Engineer' — blocklisted title term: 'ai engineer'
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android/IOS Developer' — blocklisted title term: 'ios developer'
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — salary too low (1.5 LPA)
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Web Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:12:18,655 [INFO] services.jobs.job_scraper — [react] Page 3: 0/20 passed — running total: 1
+2026-03-28 09:12:18,655 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:12:20,727 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:12:21,401 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:12:32,024 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:12:32,053 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:12:32,090 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:12:32,128 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:12:32,162 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:12:32,199 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:12:32,237 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:12:32,270 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:12:32,303 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:12:32,339 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:12:32,375 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:12:32,409 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:12:32,443 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:12:32,477 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:12:32,508 [DEBUG] services.jobs.job_scraper — Card parsed: id=120525010837 title=Generative AI Engineer
+2026-03-28 09:12:32,542 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424001918 title=Full Stack Developer
+2026-03-28 09:12:32,574 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424003255 title=Android Developer
+2026-03-28 09:12:32,605 [DEBUG] services.jobs.job_scraper — Card parsed: id=240725014567 title=Android/IOS Developer
+2026-03-28 09:12:32,635 [DEBUG] services.jobs.job_scraper — Card parsed: id=060326020720 title=Fullstack Developer
+2026-03-28 09:12:32,669 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326019253 title=Senior Java Developer
+2026-03-28 09:12:32,704 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326020674 title=Senior Web Developer
+2026-03-28 09:12:32,729 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:12:32,729 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Generative AI Engineer' — blocklisted title term: 'ai engineer'
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android Developer' — blocklisted title term: 'android developer'
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android/IOS Developer' — blocklisted title term: 'ios developer'
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — salary too low (1.5 LPA)
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:12:32,730 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Web Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:12:32,730 [INFO] services.jobs.job_scraper — [react] Page 4: 0/20 passed — running total: 1
+2026-03-28 09:12:34,486 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:12:35,158 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:12:45,824 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:12:45,846 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:12:45,883 [DEBUG] services.jobs.job_scraper — Card parsed: id=020825010484 title=Backend Support Executive
+2026-03-28 09:12:45,924 [DEBUG] services.jobs.job_scraper — Card parsed: id=020825010501 title=Non Voice Support Executive
+2026-03-28 09:12:45,958 [DEBUG] services.jobs.job_scraper — Card parsed: id=250226010629 title=Backend Executive
+2026-03-28 09:12:45,996 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:12:46,031 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:12:46,064 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:12:46,096 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326006101 title=Data Entry Operator / Data Entry
+2026-03-28 09:12:46,131 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:12:46,166 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:12:46,200 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:12:46,258 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:12:46,290 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:12:46,320 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:12:46,348 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:12:46,378 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:12:46,413 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:12:46,448 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:12:46,484 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:12:46,518 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — [mern] Sorted base URL: https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer-frontend-development-frontend-software-developer-node-dot-js-backend-mern-stack-mern-express-nestjs-jobs?k=mern%20stack%2C%20mern%20stack%20developer%2C%20mern%20full%20stack%20developer%2C%20frontend%20development%2C%20frontend%20software%20developer%2C%20node.js%2C%20backend%2C%20mern%20stack%2C%20mern%2C%20express%2C%20nestjs&nignbevent_src=jobsearchDeskGNB
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Support Executive' — salary too low (2.0 LPA)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Non Voice Support Executive' — salary too low (2.0 LPA)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Executive' — salary too low (1.75 LPA)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Data Entry Operator / Data Entry' — exp too senior (max 5.0 yrs)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:12:46,545 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:12:46,546 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:12:46,546 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:12:46,546 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:12:46,546 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:12:46,546 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:12:46,546 [INFO] services.jobs.job_scraper — [mern] Page 1: 1/20 passed — running total: 1
+2026-03-28 09:12:46,546 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:12:49,328 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:12:49,921 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:13:00,556 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:13:00,577 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:13:00,618 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:13:00,657 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:13:00,694 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:13:00,732 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:13:00,770 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:13:00,810 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:13:00,852 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:13:00,887 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:13:00,924 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:13:00,959 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:13:00,998 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:13:01,039 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:13:01,077 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:13:01,115 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:13:01,154 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:13:01,189 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:13:01,225 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:13:01,260 [DEBUG] services.jobs.job_scraper — Card parsed: id=120326025242 title=SQL Experts - Virtual Interview - 27th March (Frid
+2026-03-28 09:13:01,325 [DEBUG] services.jobs.job_scraper — Card parsed: id=091225031747 title=AWS Python- 20 Mar (Friday) - Virtual Interview
+2026-03-28 09:13:01,352 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'SQL Experts - Virtual Interview - 27th March (Friday)' — exp too senior (max 8.0 yrs)
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'AWS Python- 20 Mar (Friday) - Virtual Interview' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:01,353 [INFO] services.jobs.job_scraper — [mern] Page 2: 1/20 passed — running total: 2
+2026-03-28 09:13:01,353 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:13:03,828 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:13:04,448 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:13:15,106 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:13:15,132 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:13:15,173 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:13:15,217 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:13:15,276 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:13:15,327 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:13:15,362 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:13:15,410 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:13:15,449 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:13:15,487 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:13:15,525 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:13:15,562 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:13:15,598 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:13:15,636 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:13:15,678 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:13:15,718 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:13:15,756 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:13:15,792 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:13:15,829 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:13:15,864 [DEBUG] services.jobs.job_scraper — Card parsed: id=120326025242 title=SQL Experts - Virtual Interview - 27th March (Frid
+2026-03-28 09:13:15,901 [DEBUG] services.jobs.job_scraper — Card parsed: id=091225031747 title=AWS Python- 20 Mar (Friday) - Virtual Interview
+2026-03-28 09:13:15,927 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:13:15,927 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:13:15,927 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:15,927 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:15,927 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:13:15,927 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:13:15,927 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:13:15,927 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:13:15,927 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:13:15,928 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:15,928 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:13:15,928 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:13:15,928 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:13:15,928 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:13:15,928 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:13:15,928 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:13:15,928 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:13:15,928 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'SQL Experts - Virtual Interview - 27th March (Friday)' — exp too senior (max 8.0 yrs)
+2026-03-28 09:13:15,928 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'AWS Python- 20 Mar (Friday) - Virtual Interview' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:15,928 [INFO] services.jobs.job_scraper — [mern] Page 3: 1/20 passed — running total: 3
+2026-03-28 09:13:15,928 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:13:18,684 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:13:19,296 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:13:29,937 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:13:29,959 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:13:30,001 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:13:30,043 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:13:30,080 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:13:30,118 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:13:30,158 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:13:30,195 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:13:30,231 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:13:30,262 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:13:30,295 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:13:30,330 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:13:30,367 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:13:30,411 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:13:30,449 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:13:30,487 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:13:30,525 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:13:30,559 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:13:30,593 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:13:30,627 [DEBUG] services.jobs.job_scraper — Card parsed: id=120326025242 title=SQL Experts - Virtual Interview - 27th March (Frid
+2026-03-28 09:13:30,675 [DEBUG] services.jobs.job_scraper — Card parsed: id=091225031747 title=AWS Python- 20 Mar (Friday) - Virtual Interview
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:13:30,699 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:13:30,700 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:13:30,700 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:13:30,700 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:13:30,700 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:13:30,700 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:13:30,700 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'SQL Experts - Virtual Interview - 27th March (Friday)' — exp too senior (max 8.0 yrs)
+2026-03-28 09:13:30,700 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'AWS Python- 20 Mar (Friday) - Virtual Interview' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:30,700 [INFO] services.jobs.job_scraper — [mern] Page 4: 1/20 passed — running total: 4
+2026-03-28 09:13:33,951 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:13:36,355 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:13:48,405 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:13:48,424 [DEBUG] services.jobs.job_scraper — Card parsed: id=061125020306 title=Backend Executive
+2026-03-28 09:13:48,460 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:13:48,492 [DEBUG] services.jobs.job_scraper — Card parsed: id=020825010484 title=Backend Support Executive
+2026-03-28 09:13:48,523 [DEBUG] services.jobs.job_scraper — Card parsed: id=020825010501 title=Non Voice Support Executive
+2026-03-28 09:13:48,558 [DEBUG] services.jobs.job_scraper — Card parsed: id=250226010629 title=Backend Executive
+2026-03-28 09:13:48,593 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:13:48,631 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:13:48,673 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:13:48,714 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326006101 title=Data Entry Operator / Data Entry
+2026-03-28 09:13:48,758 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:13:48,807 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:13:48,848 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:13:48,883 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:13:48,922 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:13:48,952 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:13:48,987 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:13:49,017 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:13:49,048 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:13:49,080 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:13:49,119 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:13:49,147 [DEBUG] services.jobs.job_scraper — [reactnative] Sorted base URL: https://www.naukri.com/react-native-react-native-developer-react-native-mobile-application-developer-node-dot-js-node-js-backend-developer-node-js-developer-backend-development-backend-react-native-jobs?k=react%20native%2C%20react%20native%20developer%2C%20react%20native%20mobile%20application%20developer%2C%20node.js%2C%20node%20js%20backend%20developer%2C%20node%20js%20developer%2C%20backend%20development%2C%20backend%2C%20react%20native&nignbevent_src=jobsearchDeskGNB
+2026-03-28 09:13:49,147 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Executive' — salary too low (1.75 LPA)
+2026-03-28 09:13:49,147 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:13:49,147 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Support Executive' — salary too low (2.0 LPA)
+2026-03-28 09:13:49,147 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Non Voice Support Executive' — salary too low (2.0 LPA)
+2026-03-28 09:13:49,147 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Executive' — salary too low (1.75 LPA)
+2026-03-28 09:13:49,147 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:13:49,147 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:49,147 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Data Entry Operator / Data Entry' — exp too senior (max 5.0 yrs)
+2026-03-28 09:13:49,147 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:49,147 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:13:49,148 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:13:49,148 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:13:49,148 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:13:49,148 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:13:49,148 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:13:49,148 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:13:49,148 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:13:49,148 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:13:49,148 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:13:49,148 [INFO] services.jobs.job_scraper — [reactnative] Page 1: 1/20 passed — running total: 1
+2026-03-28 09:13:49,148 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:13:52,813 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:13:54,722 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:14:06,698 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:14:06,718 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:14:06,756 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:14:06,792 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:14:06,826 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:14:06,858 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:14:06,894 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:14:06,931 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:14:06,967 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:14:07,002 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:14:07,035 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:14:07,063 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:14:07,093 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:14:07,133 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:14:07,165 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:14:07,197 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:14:07,230 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:14:07,260 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:14:07,288 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:14:07,316 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:14:07,346 [DEBUG] services.jobs.job_scraper — Card parsed: id=120326025242 title=SQL Experts - Virtual Interview - 27th March (Frid
+2026-03-28 09:14:07,368 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:14:07,370 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'SQL Experts - Virtual Interview - 27th March (Friday)' — exp too senior (max 8.0 yrs)
+2026-03-28 09:14:07,371 [INFO] services.jobs.job_scraper — [reactnative] Page 2: 1/20 passed — running total: 2
+2026-03-28 09:14:07,371 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:14:09,981 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:14:11,998 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:14:23,975 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:14:23,996 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:14:24,034 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:14:24,083 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:14:24,133 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:14:24,172 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:14:24,209 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:14:24,241 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:14:24,274 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:14:24,307 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:14:24,340 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:14:24,375 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:14:24,407 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:14:24,441 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:14:24,475 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:14:24,505 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:14:24,536 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:14:24,572 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:14:24,604 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:14:24,636 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:14:24,670 [DEBUG] services.jobs.job_scraper — Card parsed: id=120326025242 title=SQL Experts - Virtual Interview - 27th March (Frid
+2026-03-28 09:14:24,694 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'SQL Experts - Virtual Interview - 27th March (Friday)' — exp too senior (max 8.0 yrs)
+2026-03-28 09:14:24,695 [INFO] services.jobs.job_scraper — [reactnative] Page 3: 1/20 passed — running total: 3
+2026-03-28 09:14:24,695 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:14:26,899 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:14:29,195 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:14:41,238 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:14:41,278 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:14:41,314 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:14:41,349 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:14:41,383 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:14:41,415 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:14:41,449 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:14:41,483 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:14:41,516 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:14:41,552 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:14:41,584 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:14:41,615 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:14:41,646 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:14:41,681 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:14:41,715 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:14:41,749 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:14:41,782 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:14:41,816 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:14:41,848 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:14:41,879 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:14:41,911 [DEBUG] services.jobs.job_scraper — Card parsed: id=120326025242 title=SQL Experts - Virtual Interview - 27th March (Frid
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:14:41,947 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'SQL Experts - Virtual Interview - 27th March (Friday)' — exp too senior (max 8.0 yrs)
+2026-03-28 09:14:41,947 [INFO] services.jobs.job_scraper — [reactnative] Page 4: 1/20 passed — running total: 4
+2026-03-28 09:14:41,947 [INFO] services.jobs.job_scraper — Total unique filtered jobs across all targets: 1
+2026-03-28 09:14:41,947 [INFO] services.jobs.job_session — 1 fresh candidates after dedup
+2026-03-28 09:14:41,947 [INFO] services.jobs.job_detail — Fetching detail 1/1: Developer Intern
+2026-03-28 09:14:43,785 [DEBUG] services.jobs.job_detail — Dwell 14.5s on 'Developer Intern'
+2026-03-28 09:14:58,289 [INFO] services.jobs.job_session — 0 candidates pass must-have keyword check
+2026-03-28 09:14:58,289 [INFO] services.jobs.job_session — Session complete — applied to 0 jobs
+2026-03-28 09:14:58,290 [INFO] services.jobs.job_session — === MORNING SESSION END ===
+2026-03-28 09:14:58,292 [INFO] services.jobs.job_session — === AFTERNOON SESSION START [TEST MODE] ===
+2026-03-28 09:14:58,292 [INFO] services.jobs.job_session — Session target: 2 applications | Already applied today: 0
+2026-03-28 09:14:59,816 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:15:01,789 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:15:13,767 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:15:13,789 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:15:13,827 [DEBUG] services.jobs.job_scraper — Card parsed: id=160326016044 title=Salesforce Developer
+2026-03-28 09:15:13,855 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:15:13,890 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:15:13,924 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:15:13,954 [DEBUG] services.jobs.job_scraper — Card parsed: id=170326014535 title=Senior Full Stack Developer
+2026-03-28 09:15:13,985 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:15:14,018 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:15:14,052 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:15:14,086 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:15:14,117 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:15:14,151 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:15:14,184 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:15:14,219 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:15:14,252 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:15:14,286 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:15:14,317 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326005441 title=Senior Qa Engineer
+2026-03-28 09:15:14,351 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:15:14,383 [DEBUG] services.jobs.job_scraper — Card parsed: id=260326037460 title=Automation Test Analyst-2nd & 3rd April- Virtual I
+2026-03-28 09:15:14,415 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424001785 title=Frontend Software Developer
+2026-03-28 09:15:14,439 [DEBUG] services.jobs.job_scraper — [react] Sorted base URL: https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-developer-react-developer-nextjs-typescript-javascript-jobs?k=react.js%2C%20react%20js%20developer%2C%20react%20js%20frontend%20developer%2C%20react%20developer%2C%20nextjs%2C%20typescript%2C%20javascript&nignbevent_src=jobsearchDeskGNB
+2026-03-28 09:15:14,439 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:15:14,439 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Salesforce Developer' — blocklisted title term: 'salesforce'
+2026-03-28 09:15:14,439 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:15:14,439 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:15:14,439 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Developer' — exp too senior (max 15.0 yrs)
+2026-03-28 09:15:14,439 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:15:14,439 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:15:14,439 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:15:14,439 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:15:14,439 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:15:14,440 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:15:14,440 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:15:14,440 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:15:14,440 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:15:14,440 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:15:14,440 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Qa Engineer' — blocklisted title term: 'qa engineer'
+2026-03-28 09:15:14,440 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:15:14,440 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Automation Test Analyst-2nd & 3rd April- Virtual Interview- Pan India' — blocklisted title term: 'automation test'
+2026-03-28 09:15:14,440 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Frontend Software Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:15:14,440 [INFO] services.jobs.job_scraper — [react] Page 1: 1/20 passed — running total: 1
+2026-03-28 09:15:14,440 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:15:16,649 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:15:17,059 [INFO] services.browser.browser_service - Browser launched (headless=False, session=loaded)
+2026-03-28 09:15:17,633 [INFO] services.auth.login_service - Session active â€” already on profile page
+2026-03-28 09:15:17,635 [INFO] services.jobs.job_session - === MORNING SESSION START [TEST MODE] ===
+2026-03-28 09:15:17,636 [INFO] services.jobs.job_session - Session target: 2 applications | Already applied today: 0
+2026-03-28 09:15:17,636 [INFO] services.jobs.job_scraper - [react] Navigating to search URL
+2026-03-28 09:15:18,980 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:15:31,041 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:15:31,064 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:15:31,106 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:15:31,147 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:15:31,179 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:15:31,219 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:15:31,257 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:15:31,291 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:15:31,333 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:15:31,368 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:15:31,411 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:15:31,446 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:15:31,481 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:15:31,512 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:15:31,546 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424003255 title=Android Developer
+2026-03-28 09:15:31,578 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424001918 title=Full Stack Developer
+2026-03-28 09:15:31,611 [DEBUG] services.jobs.job_scraper — Card parsed: id=120525010837 title=Generative AI Engineer
+2026-03-28 09:15:31,646 [DEBUG] services.jobs.job_scraper — Card parsed: id=240725014567 title=Android/IOS Developer
+2026-03-28 09:15:31,678 [DEBUG] services.jobs.job_scraper — Card parsed: id=060326020720 title=Fullstack Developer
+2026-03-28 09:15:31,716 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326019253 title=Senior Java Developer
+2026-03-28 09:15:31,751 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326020674 title=Senior Web Developer
+2026-03-28 09:15:31,775 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android Developer' — blocklisted title term: 'android developer'
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Generative AI Engineer' — blocklisted title term: 'ai engineer'
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android/IOS Developer' — blocklisted title term: 'ios developer'
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — salary too low (1.5 LPA)
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Web Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:15:31,777 [INFO] services.jobs.job_scraper — [react] Page 2: 0/20 passed — running total: 1
+2026-03-28 09:15:31,777 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:15:31,825 [INFO] services.jobs.job_scraper - [react] Scraping page 1 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:15:32,587 [INFO] services.jobs.job_scraper - [react] Page 1: 1/20 passed | total: 1
+2026-03-28 09:15:34,742 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:15:37,274 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:15:44,625 [WARNING] core.utils - No selector matched from list: ["a[aria-label='Next']", '.pagination .next a', 'a.fright.fs14.btn-secondary', 'span.nextPage a']
+2026-03-28 09:15:44,626 [INFO] services.jobs.job_scraper - [react] No Next button found â€” end of results
+2026-03-28 09:15:44,626 [INFO] services.jobs.job_scraper - [mern] Navigating to search URL
+2026-03-28 09:15:49,319 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:15:49,340 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:15:49,384 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:15:49,449 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:15:49,503 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:15:49,561 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:15:49,624 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:15:49,671 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:15:49,704 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:15:49,744 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:15:49,780 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:15:49,816 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:15:49,854 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:15:49,888 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:15:49,924 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424003255 title=Android Developer
+2026-03-28 09:15:49,959 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424001918 title=Full Stack Developer
+2026-03-28 09:15:49,993 [DEBUG] services.jobs.job_scraper — Card parsed: id=120525010837 title=Generative AI Engineer
+2026-03-28 09:15:50,031 [DEBUG] services.jobs.job_scraper — Card parsed: id=240725014567 title=Android/IOS Developer
+2026-03-28 09:15:50,067 [DEBUG] services.jobs.job_scraper — Card parsed: id=060326020720 title=Fullstack Developer
+2026-03-28 09:15:50,111 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326019253 title=Senior Java Developer
+2026-03-28 09:15:50,151 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326020674 title=Senior Web Developer
+2026-03-28 09:15:50,182 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:15:50,183 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:15:50,183 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:15:50,183 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:15:50,183 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:15:50,183 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:15:50,183 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:15:50,183 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:15:50,183 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:15:50,183 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:15:50,183 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:15:50,183 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:15:50,184 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:15:50,184 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android Developer' — blocklisted title term: 'android developer'
+2026-03-28 09:15:50,184 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:15:50,184 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Generative AI Engineer' — blocklisted title term: 'ai engineer'
+2026-03-28 09:15:50,184 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android/IOS Developer' — blocklisted title term: 'ios developer'
+2026-03-28 09:15:50,184 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — salary too low (1.5 LPA)
+2026-03-28 09:15:50,184 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:15:50,184 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Web Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:15:50,184 [INFO] services.jobs.job_scraper — [react] Page 3: 0/20 passed — running total: 1
+2026-03-28 09:15:50,184 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:15:52,833 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:15:54,623 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:15:58,280 [INFO] services.jobs.job_scraper - [mern] Scraping page 1 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:15:59,043 [INFO] services.jobs.job_scraper - [mern] Page 1: 1/20 passed | total: 1
+2026-03-28 09:16:06,565 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:16:06,587 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:16:06,625 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:16:06,661 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:16:06,712 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:16:06,748 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:16:06,783 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:16:06,818 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:16:06,852 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:16:06,889 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:16:06,930 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:16:06,966 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:16:07,001 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:16:07,031 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:16:07,065 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424003255 title=Android Developer
+2026-03-28 09:16:07,106 [DEBUG] services.jobs.job_scraper — Card parsed: id=220424001918 title=Full Stack Developer
+2026-03-28 09:16:07,143 [DEBUG] services.jobs.job_scraper — Card parsed: id=120525010837 title=Generative AI Engineer
+2026-03-28 09:16:07,180 [DEBUG] services.jobs.job_scraper — Card parsed: id=240725014567 title=Android/IOS Developer
+2026-03-28 09:16:07,229 [DEBUG] services.jobs.job_scraper — Card parsed: id=060326020720 title=Fullstack Developer
+2026-03-28 09:16:07,261 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326019253 title=Senior Java Developer
+2026-03-28 09:16:07,292 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326020674 title=Senior Web Developer
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:16:07,316 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:16:07,317 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android Developer' — blocklisted title term: 'android developer'
+2026-03-28 09:16:07,317 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:07,317 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Generative AI Engineer' — blocklisted title term: 'ai engineer'
+2026-03-28 09:16:07,317 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Android/IOS Developer' — blocklisted title term: 'ios developer'
+2026-03-28 09:16:07,317 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — salary too low (1.5 LPA)
+2026-03-28 09:16:07,317 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:16:07,317 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Web Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:16:07,317 [INFO] services.jobs.job_scraper — [react] Page 4: 0/20 passed — running total: 1
+2026-03-28 09:16:08,991 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:16:10,883 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:16:11,091 [WARNING] core.utils - No selector matched from list: ["a[aria-label='Next']", '.pagination .next a', 'a.fright.fs14.btn-secondary', 'span.nextPage a']
+2026-03-28 09:16:11,091 [INFO] services.jobs.job_scraper - [mern] No Next button found â€” end of results
+2026-03-28 09:16:11,092 [INFO] services.jobs.job_scraper - [reactnative] Navigating to search URL
+2026-03-28 09:16:22,833 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:16:22,855 [DEBUG] services.jobs.job_scraper — Card parsed: id=061125020306 title=Backend Executive
+2026-03-28 09:16:22,897 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:16:22,966 [DEBUG] services.jobs.job_scraper — Card parsed: id=020825010484 title=Backend Support Executive
+2026-03-28 09:16:23,002 [DEBUG] services.jobs.job_scraper — Card parsed: id=020825010501 title=Non Voice Support Executive
+2026-03-28 09:16:23,040 [DEBUG] services.jobs.job_scraper — Card parsed: id=250226010629 title=Backend Executive
+2026-03-28 09:16:23,078 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:16:23,114 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:16:23,153 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:16:23,187 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326006101 title=Data Entry Operator / Data Entry
+2026-03-28 09:16:23,227 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:16:23,266 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:16:23,302 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:16:23,338 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:16:23,374 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:16:23,409 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:16:23,529 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:16:23,565 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:16:23,603 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:16:23,636 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:16:23,687 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:16:23,717 [DEBUG] services.jobs.job_scraper — [mern] Sorted base URL: https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer-frontend-development-frontend-software-developer-node-dot-js-backend-mern-stack-mern-express-nestjs-jobs?k=mern%20stack%2C%20mern%20stack%20developer%2C%20mern%20full%20stack%20developer%2C%20frontend%20development%2C%20frontend%20software%20developer%2C%20node.js%2C%20backend%2C%20mern%20stack%2C%20mern%2C%20express%2C%20nestjs&nignbevent_src=jobsearchDeskGNB
+2026-03-28 09:16:23,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Executive' — salary too low (1.75 LPA)
+2026-03-28 09:16:23,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:16:23,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Support Executive' — salary too low (2.0 LPA)
+2026-03-28 09:16:23,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Non Voice Support Executive' — salary too low (2.0 LPA)
+2026-03-28 09:16:23,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Executive' — salary too low (1.75 LPA)
+2026-03-28 09:16:23,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:16:23,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:23,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Data Entry Operator / Data Entry' — exp too senior (max 5.0 yrs)
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:16:23,718 [INFO] services.jobs.job_scraper — [mern] Page 1: 1/20 passed — running total: 1
+2026-03-28 09:16:23,718 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:16:24,506 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 1 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:16:25,544 [INFO] services.jobs.job_scraper - [reactnative] Page 1: 1/20 passed | total: 1
+2026-03-28 09:16:26,364 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:16:27,088 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:16:37,607 [WARNING] core.utils - No selector matched from list: ["a[aria-label='Next']", '.pagination .next a', 'a.fright.fs14.btn-secondary', 'span.nextPage a']
+2026-03-28 09:16:37,608 [INFO] services.jobs.job_scraper - [reactnative] No Next button found â€” end of results
+2026-03-28 09:16:37,608 [INFO] services.jobs.job_scraper - Total unique filtered jobs across all targets: 1
+2026-03-28 09:16:37,608 [INFO] services.jobs.job_session - 1 fresh candidates after dedup
+2026-03-28 09:16:37,608 [INFO] services.jobs.job_detail - Fetching detail 1/1: Developer Intern
+2026-03-28 09:16:37,828 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:16:37,848 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:16:37,891 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:16:37,930 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:16:37,967 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:16:38,004 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:16:38,045 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:16:38,087 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:16:38,128 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:16:38,165 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:16:38,204 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:16:38,239 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:16:38,292 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:16:38,361 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:16:38,420 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:16:38,479 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:16:38,540 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:16:38,597 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:16:38,665 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:16:38,728 [DEBUG] services.jobs.job_scraper — Card parsed: id=120326025242 title=SQL Experts - Virtual Interview - 27th March (Frid
+2026-03-28 09:16:38,800 [DEBUG] services.jobs.job_scraper — Card parsed: id=091225031747 title=AWS Python- 20 Mar (Friday) - Virtual Interview
+2026-03-28 09:16:38,840 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:16:38,840 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:16:38,840 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:38,840 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:38,840 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:16:38,840 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:16:38,840 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:16:38,840 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:16:38,840 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:16:38,840 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:38,840 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:16:38,842 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:16:38,842 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:16:38,842 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:16:38,842 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:16:38,842 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:16:38,842 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:16:38,842 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'SQL Experts - Virtual Interview - 27th March (Friday)' — exp too senior (max 8.0 yrs)
+2026-03-28 09:16:38,842 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'AWS Python- 20 Mar (Friday) - Virtual Interview' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:38,842 [INFO] services.jobs.job_scraper — [mern] Page 2: 1/20 passed — running total: 2
+2026-03-28 09:16:38,842 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:16:41,726 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:16:42,324 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:16:49,555 [INFO] services.jobs.job_session - 0 candidates pass must-have keyword check
+2026-03-28 09:16:49,555 [INFO] services.jobs.job_session - 0 jobs ready to apply (score â‰¥ 80, easy_apply=True)
+2026-03-28 09:16:49,557 [INFO] services.jobs.job_session - Session complete â€” applied to 0 jobs
+2026-03-28 09:16:49,557 [INFO] services.jobs.job_session - === MORNING SESSION END ===
+2026-03-28 09:16:49,558 [INFO] services.jobs.job_session - === AFTERNOON SESSION START [TEST MODE] ===
+2026-03-28 09:16:49,806 [INFO] services.browser.browser_service - Browser closed
+2026-03-28 09:16:52,970 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:16:52,992 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:16:53,027 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:16:53,066 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:16:53,103 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:16:53,138 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:16:53,175 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:16:53,212 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:16:53,246 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:16:53,280 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:16:53,322 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:16:53,376 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:16:53,414 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:16:53,450 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:16:53,486 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:16:53,519 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:16:53,554 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:16:53,587 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:16:53,623 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:16:53,657 [DEBUG] services.jobs.job_scraper — Card parsed: id=120326025242 title=SQL Experts - Virtual Interview - 27th March (Frid
+2026-03-28 09:16:53,691 [DEBUG] services.jobs.job_scraper — Card parsed: id=091225031747 title=AWS Python- 20 Mar (Friday) - Virtual Interview
+2026-03-28 09:16:53,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:16:53,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:16:53,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:53,717 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'SQL Experts - Virtual Interview - 27th March (Friday)' — exp too senior (max 8.0 yrs)
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'AWS Python- 20 Mar (Friday) - Virtual Interview' — exp too senior (max 10.0 yrs)
+2026-03-28 09:16:53,718 [INFO] services.jobs.job_scraper — [mern] Page 3: 1/20 passed — running total: 3
+2026-03-28 09:16:53,718 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:16:56,752 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:16:57,337 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:17:07,933 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:17:07,955 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:17:07,994 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:17:08,030 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:17:08,066 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:17:08,101 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:17:08,135 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:17:08,173 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:17:08,207 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:17:08,239 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:17:08,273 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:17:08,305 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:17:08,342 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:17:08,381 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:17:08,414 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:17:08,453 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:17:08,487 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:17:08,523 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:17:08,556 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:17:08,591 [DEBUG] services.jobs.job_scraper — Card parsed: id=120326025242 title=SQL Experts - Virtual Interview - 27th March (Frid
+2026-03-28 09:17:08,623 [DEBUG] services.jobs.job_scraper — Card parsed: id=091225031747 title=AWS Python- 20 Mar (Friday) - Virtual Interview
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:17:08,647 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:17:08,648 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:17:08,648 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:17:08,648 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:17:08,648 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:17:08,648 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'SQL Experts - Virtual Interview - 27th March (Friday)' — exp too senior (max 8.0 yrs)
+2026-03-28 09:17:08,648 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'AWS Python- 20 Mar (Friday) - Virtual Interview' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:08,648 [INFO] services.jobs.job_scraper — [mern] Page 4: 1/20 passed — running total: 4
+2026-03-28 09:17:10,501 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:17:11,214 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:17:21,842 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:17:21,861 [DEBUG] services.jobs.job_scraper — Card parsed: id=061125020306 title=Backend Executive
+2026-03-28 09:17:21,898 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:17:21,934 [DEBUG] services.jobs.job_scraper — Card parsed: id=020825010484 title=Backend Support Executive
+2026-03-28 09:17:21,972 [DEBUG] services.jobs.job_scraper — Card parsed: id=020825010501 title=Non Voice Support Executive
+2026-03-28 09:17:22,012 [DEBUG] services.jobs.job_scraper — Card parsed: id=250226010629 title=Backend Executive
+2026-03-28 09:17:22,049 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:17:22,084 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:17:22,120 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:17:22,152 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326006101 title=Data Entry Operator / Data Entry
+2026-03-28 09:17:22,191 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:17:22,230 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:17:22,268 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:17:22,304 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:17:22,339 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:17:22,372 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:17:22,406 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:17:22,437 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:17:22,474 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:17:22,514 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:17:22,550 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:17:22,578 [DEBUG] services.jobs.job_scraper — [reactnative] Sorted base URL: https://www.naukri.com/react-native-react-native-developer-react-native-mobile-application-developer-node-dot-js-node-js-backend-developer-node-js-developer-backend-development-backend-react-native-jobs?k=react%20native%2C%20react%20native%20developer%2C%20react%20native%20mobile%20application%20developer%2C%20node.js%2C%20node%20js%20backend%20developer%2C%20node%20js%20developer%2C%20backend%20development%2C%20backend%2C%20react%20native&nignbevent_src=jobsearchDeskGNB
+2026-03-28 09:17:22,578 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Executive' — salary too low (1.75 LPA)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Support Executive' — salary too low (2.0 LPA)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Non Voice Support Executive' — salary too low (2.0 LPA)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Executive' — salary too low (1.75 LPA)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Data Entry Operator / Data Entry' — exp too senior (max 5.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:17:22,579 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:17:22,579 [INFO] services.jobs.job_scraper — [reactnative] Page 1: 1/20 passed — running total: 1
+2026-03-28 09:17:22,580 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:17:25,913 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:17:26,506 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:17:37,107 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:17:37,129 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:17:37,168 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:17:37,212 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:17:37,246 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:17:37,286 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:17:37,318 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:17:37,350 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:17:37,387 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:17:37,421 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:17:37,452 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:17:37,484 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:17:37,513 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:17:37,551 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:17:37,586 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:17:37,620 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:17:37,656 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:17:37,690 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:17:37,728 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:17:37,777 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:17:37,833 [DEBUG] services.jobs.job_scraper — Card parsed: id=120326025242 title=SQL Experts - Virtual Interview - 27th March (Frid
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'SQL Experts - Virtual Interview - 27th March (Friday)' — exp too senior (max 8.0 yrs)
+2026-03-28 09:17:37,858 [INFO] services.jobs.job_scraper — [reactnative] Page 2: 1/20 passed — running total: 2
+2026-03-28 09:17:37,858 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:17:40,234 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:17:40,935 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:17:51,589 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:17:51,612 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:17:51,649 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:17:51,690 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:17:51,728 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:17:51,764 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:17:51,798 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:17:51,836 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:17:51,870 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:17:51,928 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:17:51,957 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:17:51,986 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:17:52,020 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:17:52,056 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:17:52,102 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:17:52,147 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:17:52,184 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:17:52,225 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:17:52,262 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:17:52,297 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:17:52,330 [DEBUG] services.jobs.job_scraper — Card parsed: id=120326025242 title=SQL Experts - Virtual Interview - 27th March (Frid
+2026-03-28 09:17:52,357 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:17:52,357 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:17:52,357 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:52,357 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:52,357 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:17:52,357 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'SQL Experts - Virtual Interview - 27th March (Friday)' — exp too senior (max 8.0 yrs)
+2026-03-28 09:17:52,358 [INFO] services.jobs.job_scraper — [reactnative] Page 3: 1/20 passed — running total: 3
+2026-03-28 09:17:52,358 [DEBUG] services.jobs.job_scraper — Pagination delay 1.0s
+2026-03-28 09:17:55,023 [DEBUG] core.utils — Matched selector: button#filter-sort
+2026-03-28 09:17:55,677 [DEBUG] core.utils — Matched selector: a[data-id='filter-sort-f']
+2026-03-28 09:18:06,280 [DEBUG] services.jobs.job_scraper — Sorted by Date
+2026-03-28 09:18:06,301 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008202 title=Senior Software Developer
+2026-03-28 09:18:06,337 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008174 title=Angular Developer
+2026-03-28 09:18:06,368 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326008114 title=Full Stack Developer (Onsite)
+2026-03-28 09:18:06,399 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326007481 title=Developer Intern
+2026-03-28 09:18:06,432 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326034073 title=Python Fullstack Developer
+2026-03-28 09:18:06,465 [DEBUG] services.jobs.job_scraper — Card parsed: id=250326028951 title=Senior Full Stack Software Engineer
+2026-03-28 09:18:06,496 [DEBUG] services.jobs.job_scraper — Card parsed: id=190126023331 title=Healthcare Solutions Lead / Architect
+2026-03-28 09:18:06,530 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326004252 title=Linux BSP QA
+2026-03-28 09:18:06,567 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326003872 title=ReactJS Developer Web Services & AI-Assisted Devel
+2026-03-28 09:18:06,599 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326022338 title=.Net fullstack Developer - {PAN INDIA}
+2026-03-28 09:18:06,634 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326023087 title=dot net fullstack Developer - {PAN INDIA}
+2026-03-28 09:18:06,664 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000335 title=Backend Developer
+2026-03-28 09:18:06,695 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000330 title=Sr AI systems Engineer
+2026-03-28 09:18:06,733 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000319 title=Full Stack Developer
+2026-03-28 09:18:06,764 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000280 title=Fullstack Developer
+2026-03-28 09:18:06,799 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000263 title=Fullstack Developer
+2026-03-28 09:18:06,832 [DEBUG] services.jobs.job_scraper — Card parsed: id=170226019267 title=Fresher SQL Developer
+2026-03-28 09:18:06,865 [DEBUG] services.jobs.job_scraper — Card parsed: id=280326000097 title=React JS Developer
+2026-03-28 09:18:06,896 [DEBUG] services.jobs.job_scraper — Card parsed: id=270326010350 title=Fullstack Developer - Lead
+2026-03-28 09:18:06,934 [DEBUG] services.jobs.job_scraper — Card parsed: id=200326026683 title=Java Developer
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Software Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Angular Developer' — blocklisted title term: 'angular developer'
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer (Onsite)' — salary too low (1.75 LPA)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Python Fullstack Developer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Senior Full Stack Software Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Healthcare Solutions Lead / Architect' — exp too senior (max 12.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Linux BSP QA' — exp too senior (max 12.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'ReactJS Developer Web Services & AI-Assisted Development' — exp too senior (max 6.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP '.Net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'dot net fullstack Developer - {PAN INDIA}' — exp too senior (max 9.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Backend Developer' — exp too senior (max 8.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Sr AI systems Engineer' — exp too senior (max 10.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Full Stack Developer' — exp too senior (max 5.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 7.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer' — exp too senior (max 12.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fresher SQL Developer' — salary too low (2.0 LPA)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'React JS Developer' — exp too senior (max 11.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Fullstack Developer - Lead' — exp too senior (max 13.0 yrs)
+2026-03-28 09:18:06,958 [DEBUG] services.jobs.job_scraper — Pre-filter: SKIP 'Java Developer' — blocklisted title term: 'java developer'
+2026-03-28 09:18:06,958 [INFO] services.jobs.job_scraper — [reactnative] Page 4: 1/20 passed — running total: 4
+2026-03-28 09:18:06,958 [INFO] services.jobs.job_scraper — Total unique filtered jobs across all targets: 1
+2026-03-28 09:18:06,958 [INFO] services.jobs.job_session — 1 fresh candidates after dedup
+2026-03-28 09:18:06,958 [INFO] services.jobs.job_detail — Fetching detail 1/1: Developer Intern
+2026-03-28 09:18:08,895 [DEBUG] services.jobs.job_detail — Dwell 13.9s on 'Developer Intern'
+2026-03-28 09:18:22,794 [INFO] services.jobs.job_session — 0 candidates pass must-have keyword check
+2026-03-28 09:18:22,795 [INFO] services.jobs.job_session — Session complete — applied to 0 jobs
+2026-03-28 09:18:22,795 [INFO] services.jobs.job_session — === AFTERNOON SESSION END ===
+2026-03-28 09:18:23,066 [INFO] services.browser.browser_service — Browser closed
+2026-03-28 09:18:40,860 [INFO] services.browser.browser_service - Browser launched (headless=False, session=loaded)
+2026-03-28 09:18:42,178 [INFO] services.auth.login_service - Session active â€” already on profile page
+2026-03-28 09:18:42,178 [INFO] services.jobs.job_session - === MORNING SESSION START [TEST MODE] ===
+2026-03-28 09:18:42,182 [INFO] services.jobs.job_session - Session target: 2 applications | Already applied today: 0
+2026-03-28 09:18:42,182 [INFO] services.jobs.job_scraper - [react] Navigating to search URL
+2026-03-28 09:18:55,258 [INFO] services.jobs.job_scraper - [react] Scraping page 1 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:18:56,114 [INFO] services.jobs.job_scraper - [react] Page 1: 1/20 passed | total: 1
+2026-03-28 09:19:25,280 [INFO] services.jobs.job_scraper - [react] Scraping page 2 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:19:26,078 [INFO] services.jobs.job_scraper - [react] Page 2: 0/20 passed | total: 1
+2026-03-28 09:19:55,227 [INFO] services.jobs.job_scraper - [react] Scraping page 3 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:19:55,991 [INFO] services.jobs.job_scraper - [react] Page 3: 1/20 passed | total: 2
+2026-03-28 09:20:25,155 [INFO] services.jobs.job_scraper - [react] Scraping page 4 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:20:25,877 [INFO] services.jobs.job_scraper - [react] Page 4: 1/20 passed | total: 3
+2026-03-28 09:20:25,877 [INFO] services.jobs.job_scraper - [mern] Navigating to search URL
+2026-03-28 09:20:39,785 [INFO] services.jobs.job_scraper - [mern] Scraping page 1 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:20:40,607 [INFO] services.jobs.job_scraper - [mern] Page 1: 1/20 passed | total: 1
+2026-03-28 09:21:09,746 [INFO] services.jobs.job_scraper - [mern] Scraping page 2 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:21:10,579 [INFO] services.jobs.job_scraper - [mern] Page 2: 0/20 passed | total: 1
+2026-03-28 09:21:39,738 [INFO] services.jobs.job_scraper - [mern] Scraping page 3 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:21:40,517 [INFO] services.jobs.job_scraper - [mern] Page 3: 1/20 passed | total: 2
+2026-03-28 09:22:11,071 [INFO] services.jobs.job_scraper - [mern] Scraping page 4 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:22:11,845 [INFO] services.jobs.job_scraper - [mern] Page 4: 1/20 passed | total: 3
+2026-03-28 09:22:11,845 [INFO] services.jobs.job_scraper - [reactnative] Navigating to search URL
+2026-03-28 09:22:28,849 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 1 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:22:29,647 [INFO] services.jobs.job_scraper - [reactnative] Page 1: 1/20 passed | total: 1
+2026-03-28 09:22:58,807 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 2 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:22:59,654 [INFO] services.jobs.job_scraper - [reactnative] Page 2: 0/20 passed | total: 1
+2026-03-28 09:23:28,827 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 3 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:23:29,582 [INFO] services.jobs.job_scraper - [reactnative] Page 3: 1/20 passed | total: 2
+2026-03-28 09:23:58,742 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 4 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:24:00,023 [INFO] services.jobs.job_scraper - [reactnative] Page 4: 1/20 passed | total: 3
+2026-03-28 09:24:00,023 [INFO] services.jobs.job_scraper - Total unique filtered jobs across all targets: 4
+2026-03-28 09:24:00,023 [INFO] services.jobs.job_session - 4 fresh candidates after dedup
+2026-03-28 09:24:00,023 [INFO] services.jobs.job_detail - Fetching detail 1/4: Developer Intern
+2026-03-28 09:24:17,025 [INFO] services.jobs.job_detail - Fetching detail 2/4: Software Trainee Intern
+2026-03-28 09:24:32,202 [INFO] services.jobs.job_detail - Fetching detail 3/4: Female Freshers with asp.net MVC or core only
+2026-03-28 09:24:48,222 [INFO] services.jobs.job_detail - Fetching detail 4/4: Back Office Executive - Noida
+2026-03-28 09:25:01,368 [INFO] services.jobs.job_session - 0 candidates pass must-have keyword check
+2026-03-28 09:25:01,368 [INFO] services.jobs.job_session - 0 jobs ready to apply (score >= 80, easy_apply=True)
+2026-03-28 09:25:01,368 [INFO] services.jobs.job_session - Session complete â€” applied to 0 jobs
+2026-03-28 09:25:01,368 [INFO] services.jobs.job_session - === MORNING SESSION END ===
+2026-03-28 09:25:01,368 [INFO] services.jobs.job_session - === AFTERNOON SESSION START [TEST MODE] ===
+2026-03-28 09:25:01,368 [INFO] services.jobs.job_session - Session target: 2 applications | Already applied today: 0
+2026-03-28 09:25:01,368 [INFO] services.jobs.job_scraper - [react] Navigating to search URL
+2026-03-28 09:25:15,287 [INFO] services.jobs.job_scraper - [react] Scraping page 1 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:25:16,670 [INFO] services.jobs.job_scraper - [react] Page 1: 1/20 passed | total: 1
+2026-03-28 09:25:45,948 [INFO] services.jobs.job_scraper - [react] Scraping page 2 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:25:47,282 [INFO] services.jobs.job_scraper - [react] Page 2: 0/20 passed | total: 1
+2026-03-28 09:26:16,502 [INFO] services.jobs.job_scraper - [react] Scraping page 3 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:26:17,844 [INFO] services.jobs.job_scraper - [react] Page 3: 0/20 passed | total: 1
+2026-03-28 09:26:47,040 [INFO] services.jobs.job_scraper - [react] Scraping page 4 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:26:48,229 [INFO] services.jobs.job_scraper - [react] Page 4: 0/20 passed | total: 1
+2026-03-28 09:26:48,229 [INFO] services.jobs.job_scraper - [mern] Navigating to search URL
+2026-03-28 09:27:02,265 [INFO] services.jobs.job_scraper - [mern] Scraping page 1 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:27:03,662 [INFO] services.jobs.job_scraper - [mern] Page 1: 1/20 passed | total: 1
+2026-03-28 09:27:22,776 [WARNING] core.utils - No selector matched from list: ["a[aria-label='Next']", "a[aria-label='next']", "button[aria-label='Next']", "a[title='Next']", "[class*='pagination'] a[class*='next']", "[class*='paginationArrow']:last-child", "a:has-text('Next')", "[class*='fright'][class*='btn']"]
+2026-03-28 09:27:23,258 [INFO] services.browser.browser_service - Browser closed
+2026-03-28 09:33:22,997 [INFO] services.browser.browser_service - Browser launched (headless=False, session=loaded)
+2026-03-28 09:33:23,529 [INFO] services.auth.login_service - Session active â€” already on profile page
+2026-03-28 09:33:23,529 [INFO] services.jobs.job_session - === MORNING SESSION START [TEST MODE] ===
+2026-03-28 09:33:23,532 [INFO] services.jobs.job_session - Session target: 2 applications | Already applied today: 0
+2026-03-28 09:33:23,533 [INFO] services.jobs.job_scraper - [react] Navigating to search URL
+2026-03-28 09:33:37,299 [INFO] services.jobs.job_scraper - [react] Scraping page 1 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:33:38,108 [INFO] services.jobs.job_scraper - [react] Page 1: 1/20 passed | total: 1
+2026-03-28 09:33:49,211 [INFO] services.jobs.job_scraper - [react] Scraping page 2 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:33:49,934 [INFO] services.jobs.job_scraper - [react] Page 2: 0/20 passed | total: 1
+2026-03-28 09:34:01,046 [INFO] services.jobs.job_scraper - [react] Scraping page 3 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:34:01,763 [INFO] services.jobs.job_scraper - [react] Page 3: 3/20 passed | total: 4
+2026-03-28 09:34:12,861 [INFO] services.jobs.job_scraper - [react] Scraping page 4 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:34:13,646 [INFO] services.jobs.job_scraper - [react] Page 4: 0/20 passed | total: 4
+2026-03-28 09:34:13,648 [INFO] services.jobs.job_scraper - [mern] Navigating to search URL
+2026-03-28 09:34:26,500 [INFO] services.jobs.job_scraper - [mern] Scraping page 1 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:34:27,330 [INFO] services.jobs.job_scraper - [mern] Page 1: 1/20 passed | total: 1
+2026-03-28 09:34:38,458 [INFO] services.jobs.job_scraper - [mern] Scraping page 2 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:34:39,225 [INFO] services.jobs.job_scraper - [mern] Page 2: 0/20 passed | total: 1
+2026-03-28 09:34:50,306 [INFO] services.jobs.job_scraper - [mern] Scraping page 3 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:34:51,085 [INFO] services.jobs.job_scraper - [mern] Page 3: 1/20 passed | total: 2
+2026-03-28 09:35:02,200 [INFO] services.jobs.job_scraper - [mern] Scraping page 4 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:35:03,016 [INFO] services.jobs.job_scraper - [mern] Page 4: 1/20 passed | total: 3
+2026-03-28 09:35:03,016 [INFO] services.jobs.job_scraper - [reactnative] Navigating to search URL
+2026-03-28 09:35:16,606 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 1 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:35:17,384 [INFO] services.jobs.job_scraper - [reactnative] Page 1: 1/20 passed | total: 1
+2026-03-28 09:35:28,492 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 2 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:35:29,227 [INFO] services.jobs.job_scraper - [reactnative] Page 2: 0/20 passed | total: 1
+2026-03-28 09:35:40,315 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 3 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:35:41,076 [INFO] services.jobs.job_scraper - [reactnative] Page 3: 1/20 passed | total: 2
+2026-03-28 09:35:52,194 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 4 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:35:52,958 [INFO] services.jobs.job_scraper - [reactnative] Page 4: 2/20 passed | total: 4
+2026-03-28 09:35:52,958 [INFO] services.jobs.job_scraper - Total unique filtered jobs across all targets: 5
+2026-03-28 09:35:52,958 [INFO] services.jobs.job_session - 5 fresh candidates after dedup
+2026-03-28 09:35:52,958 [INFO] services.jobs.job_detail - Fetching detail 1/5: Developer Intern
+2026-03-28 09:36:01,101 [INFO] services.jobs.job_detail - Fetching detail 2/5: Walk-in For UI FSD professionals on 28-Mar-26!! Hyderabad!!
+2026-03-28 09:36:12,492 [INFO] services.jobs.job_detail - Fetching detail 3/5: Walk-in For Dotnetcore FSD/Cloud professionals on 28-Mar-26! Hyderabad
+2026-03-28 09:36:26,864 [INFO] services.jobs.job_detail - Fetching detail 4/5: Software Trainee Intern
+2026-03-28 09:36:39,520 [INFO] services.jobs.job_detail - Fetching detail 5/5: Back Office Executive - Noida
+2026-03-28 09:36:56,186 [INFO] services.jobs.job_session - 0 candidates pass must-have keyword check
+2026-03-28 09:36:56,186 [INFO] services.jobs.job_session - 0 jobs ready to apply (score >= 80, easy_apply=True)
+2026-03-28 09:36:56,186 [INFO] services.jobs.job_session - Session complete â€” applied to 0 jobs
+2026-03-28 09:36:56,186 [INFO] services.jobs.job_session - === MORNING SESSION END ===
+2026-03-28 09:36:56,186 [INFO] services.jobs.job_session - === AFTERNOON SESSION START [TEST MODE] ===
+2026-03-28 09:36:56,186 [INFO] services.jobs.job_session - Session target: 2 applications | Already applied today: 0
+2026-03-28 09:36:56,187 [INFO] services.jobs.job_scraper - [react] Navigating to search URL
+2026-03-28 09:37:09,005 [INFO] services.jobs.job_scraper - [react] Scraping page 1 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:37:09,797 [INFO] services.jobs.job_scraper - [react] Page 1: 1/20 passed | total: 1
+2026-03-28 09:37:20,907 [INFO] services.jobs.job_scraper - [react] Scraping page 2 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:37:21,638 [INFO] services.jobs.job_scraper - [react] Page 2: 0/20 passed | total: 1
+2026-03-28 09:37:32,755 [INFO] services.jobs.job_scraper - [react] Scraping page 3 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:37:33,523 [INFO] services.jobs.job_scraper - [react] Page 3: 0/20 passed | total: 1
+2026-03-28 09:37:44,590 [INFO] services.jobs.job_scraper - [react] Scraping page 4 (url=https://www.naukri.com/react-dot-js-react-js-developer-react-js-frontend-develop)
+2026-03-28 09:37:45,537 [INFO] services.jobs.job_scraper - [react] Page 4: 0/20 passed | total: 1
+2026-03-28 09:37:45,537 [INFO] services.jobs.job_scraper - [mern] Navigating to search URL
+2026-03-28 09:37:59,931 [INFO] services.jobs.job_scraper - [mern] Scraping page 1 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:38:00,758 [INFO] services.jobs.job_scraper - [mern] Page 1: 1/20 passed | total: 1
+2026-03-28 09:38:11,852 [INFO] services.jobs.job_scraper - [mern] Scraping page 2 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:38:12,624 [INFO] services.jobs.job_scraper - [mern] Page 2: 0/20 passed | total: 1
+2026-03-28 09:38:23,711 [INFO] services.jobs.job_scraper - [mern] Scraping page 3 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:38:24,502 [INFO] services.jobs.job_scraper - [mern] Page 3: 0/20 passed | total: 1
+2026-03-28 09:38:35,626 [INFO] services.jobs.job_scraper - [mern] Scraping page 4 (url=https://www.naukri.com/mern-stack-mern-stack-developer-mern-full-stack-developer)
+2026-03-28 09:38:36,387 [INFO] services.jobs.job_scraper - [mern] Page 4: 0/20 passed | total: 1
+2026-03-28 09:38:36,387 [INFO] services.jobs.job_scraper - [reactnative] Navigating to search URL
+2026-03-28 09:38:50,472 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 1 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:38:51,237 [INFO] services.jobs.job_scraper - [reactnative] Page 1: 0/20 passed | total: 0
+2026-03-28 09:39:02,352 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 2 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:39:03,135 [INFO] services.jobs.job_scraper - [reactnative] Page 2: 0/20 passed | total: 0
+2026-03-28 09:39:14,218 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 3 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:39:15,025 [INFO] services.jobs.job_scraper - [reactnative] Page 3: 0/20 passed | total: 0
+2026-03-28 09:39:26,167 [INFO] services.jobs.job_scraper - [reactnative] Scraping page 4 (url=https://www.naukri.com/react-native-react-native-developer-react-native-mobile-a)
+2026-03-28 09:39:26,922 [INFO] services.jobs.job_scraper - [reactnative] Page 4: 0/20 passed | total: 0
+2026-03-28 09:39:26,922 [INFO] services.jobs.job_scraper - Total unique filtered jobs across all targets: 1
+2026-03-28 09:39:26,922 [INFO] services.jobs.job_session - 1 fresh candidates after dedup
+2026-03-28 09:39:26,922 [INFO] services.jobs.job_detail - Fetching detail 1/1: Developer Intern
+2026-03-28 09:39:44,072 [INFO] services.jobs.job_session - 0 candidates pass must-have keyword check
+2026-03-28 09:39:44,072 [INFO] services.jobs.job_session - 0 jobs ready to apply (score >= 80, easy_apply=True)
+2026-03-28 09:39:44,072 [INFO] services.jobs.job_session - Session complete â€” applied to 0 jobs
+2026-03-28 09:39:44,072 [INFO] services.jobs.job_session - === AFTERNOON SESSION END ===
+2026-03-28 09:39:44,322 [INFO] services.browser.browser_service - Browser closed

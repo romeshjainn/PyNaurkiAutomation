@@ -31,7 +31,12 @@
       "Bash(playwright install:*)",
       "Bash(py:*)",
       "Bash(.venv/Scripts/python --version)",
-      "Bash(.venv/Scripts/python resume_code/generate_resume.py)"
+      "Bash(.venv/Scripts/python resume_code/generate_resume.py)",
+      "Bash(python:*)",
+      "Bash(source .venv/Scripts/activate)",
+      "Bash(pkill -f \"services.browser.browser_service\")",
+      "Bash(pkill -f \"python -c\")",
+      "Bash(taskkill /F /IM python.exe)"
     ]
   }
 }
