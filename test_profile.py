@@ -11,11 +11,18 @@ page = browser.launch()
 try:
     LoginService(page).ensure_logged_in()
     result = ProfileService(page).update(force_all=True, skip_gaps=True)
-    print("\n--- Result ---")
-    print("Headline before:", result.get("prev_headline"))
-    print("Headline after :", result.get("new_headline"))
-    print("Summary before :", result.get("prev_summary", "")[:100])
-    print("Summary after  :", result.get("new_summary", "")[:100])
-    print("Resume         :", result.get("resume_path"))
+
+    if result.get("resume_path"):
+        print("\n✅ RESUME SUCCESS —", result.get("resume_path"))
+
+    if result.get("new_headline"):
+        print("\n✅ HEADLINE SUCCESS")
+        print("   Before:", result.get("prev_headline"))
+        print("   After :", result.get("new_headline"))
+
+    if result.get("new_summary"):
+        print("\n✅ SUMMARY SUCCESS")
+        print("   Before:", result.get("prev_summary", "")[:100])
+        print("   After :", result.get("new_summary", "")[:100])
 finally:
     browser.close()

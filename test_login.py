@@ -9,5 +9,6 @@ browser = BrowserService()
 page = browser.launch()
 try:
     LoginService(page).ensure_logged_in()
+    print("\n✅ LOGIN SUCCESS\n")
 finally:
     browser.close()

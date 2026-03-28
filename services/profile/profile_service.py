@@ -133,6 +133,11 @@ class ProfileService:
             self.page.wait_for_selector("#lazyResumeHead, .resumeHeadline", timeout=15000)
         except Exception:
             pass
+        # Wait for React to hydrate the edit icon inside the widget
+        try:
+            self.page.wait_for_selector("#lazyResumeHead .widgetHead span.edit.icon", timeout=15000)
+        except Exception:
+            pass
         self.page.wait_for_timeout(2000)
         logger.info("On profile page — widgets loaded")
 
@@ -216,6 +221,19 @@ class ProfileService:
 
     def _update_headline(self, headline: str):
         logger.info("Updating resume headline...")
+
+        # Reload profile page so widgets are fresh after resume upload
+        self.page.goto(NAUKRI_PROFILE_URL, wait_until="domcontentloaded")
+        try:
+            self.page.wait_for_selector("#lazyResumeHead, .resumeHeadline", timeout=15000)
+        except Exception:
+            pass
+        # Wait for React to hydrate the edit icon
+        try:
+            self.page.wait_for_selector("#lazyResumeHead .widgetHead span.edit.icon", timeout=15000)
+        except Exception:
+            pass
+        self.page.wait_for_timeout(2000)
 
         clicked = False
         for sel in ProfileLocators.HEADLINE_EDIT:

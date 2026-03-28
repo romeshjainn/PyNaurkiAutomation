@@ -75,7 +75,13 @@
       "Bash(git commit:*)",
       "Bash(git config:*)",
       "Bash(git push:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(BROWSER_HEADLESS=true python3 update_profile_now.py 2>&1)",
+      "Bash(sudo apt-get:*)",
+      "Bash(curl:*)",
+      "Bash(DISPLAY=:99 python3 test_profile.py 2>&1)",
+      "Bash(DISPLAY=:99 python3 - << 'EOF'\nimport logging, sys\nlogging.basicConfig\\(level=logging.INFO, format=\"%\\(asctime\\)s [%\\(levelname\\)s] %\\(message\\)s\", stream=sys.stdout\\)\nfrom services.browser.browser_service import BrowserService\nfrom services.auth.login_service import LoginService\nfrom config.settings import NAUKRI_PROFILE_URL\n\nbrowser = BrowserService\\(\\)\npage = browser.launch\\(\\)\ntry:\n    LoginService\\(page\\).ensure_logged_in\\(\\)\n    page.wait_for_timeout\\(3000\\)\n    page.screenshot\\(path=\"/tmp/profile_page.png\", full_page=True\\)\n    print\\(\"Screenshot saved\"\\)\n    # Dump headline section HTML\n    html = page.evaluate\\(\"\"\"\\(\\) => {\n        const el = document.querySelector\\('#lazyResumeHead'\\) || document.querySelector\\('.resumeHeadline'\\);\n        return el ? el.outerHTML.substring\\(0, 2000\\) : 'NOT FOUND';\n    }\"\"\"\\)\n    print\\(\"Headline section HTML:\", html\\)\nfinally:\n    browser.close\\(\\)\nEOF)",
+      "Bash(DISPLAY=:99 python3 - << 'EOF'\nimport logging, sys\nlogging.basicConfig\\(level=logging.INFO, stream=sys.stdout\\)\nfrom services.browser.browser_service import BrowserService\nfrom services.auth.login_service import LoginService\n\nbrowser = BrowserService\\(\\)\npage = browser.launch\\(\\)\ntry:\n    LoginService\\(page\\).ensure_logged_in\\(\\)\n    page.wait_for_timeout\\(3000\\)\n\n    selectors = [\n        \"#lazyResumeHead .widgetHead span.edit.icon\",\n        \".resumeHeadline .widgetHead span.edit.icon\",\n        \"span.edit.icon\",\n    ]\n    for sel in selectors:\n        count = page.locator\\(sel\\).count\\(\\)\n        print\\(f\"Selector '{sel}' → count={count}\"\\)\n        if count > 0:\n            visible = page.locator\\(sel\\).first.is_visible\\(\\)\n            print\\(f\"  visible={visible}\"\\)\n\n    # Try force clicking directly\n    loc = page.locator\\(\"#lazyResumeHead .widgetHead span.edit.icon\"\\).first\n    loc.scroll_into_view_if_needed\\(timeout=5000\\)\n    loc.click\\(force=True\\)\n    page.wait_for_timeout\\(2000\\)\n    form_visible = page.locator\\(\"form[name='resumeHeadlineForm']\"\\).is_visible\\(\\)\n    print\\(f\"Form visible after click: {form_visible}\"\\)\nfinally:\n    browser.close\\(\\)\nEOF)"
     ]
   }
 }
