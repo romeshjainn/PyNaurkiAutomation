@@ -34,17 +34,29 @@ logger = logging.getLogger(__name__)
 TEST_MODE = True
 
 # ── Session limits ─────────────────────────────────────────────────────────────
-MORNING_TARGET   = (4, 6)   # (min, max) applications
+MORNING_TARGET   = (4, 7)   # (min, max) applications — total daily goal 7–12
 AFTERNOON_TARGET = (3, 5)
 
 # ── Human simulation knobs ─────────────────────────────────────────────────────
-INTER_APP_DELAY_MIN   = 3 * 60    # 3 minutes between applications (seconds)
-INTER_APP_DELAY_MAX   = 8 * 60    # 8 minutes between applications (seconds)
-DECOY_JOBS_COUNT      = (2, 3)    # browse this many jobs without applying
-DECOY_DWELL_MIN       = 8         # seconds to "read" a decoy job
-DECOY_DWELL_MAX       = 20
+INTER_APP_DELAY_MIN   = 15 * 60   # 15 minutes between applications (seconds)
+INTER_APP_DELAY_MAX   = 35 * 60   # 35 minutes between applications (seconds)
+DECOY_JOBS_COUNT      = (2, 4)    # browse this many jobs without applying
+DECOY_DWELL_MIN       = 15        # seconds to "read" a decoy job
+DECOY_DWELL_MAX       = 45
 SCROLL_PAUSE_MIN      = 1.5       # seconds between scroll steps
-SCROLL_PAUSE_MAX      = 3.5
+SCROLL_PAUSE_MAX      = 4.0
+
+# ── Browser distraction knobs ──────────────────────────────────────────────────
+# Probability that a distraction event fires between two job applications
+DISTRACTION_CHANCE    = 0.65
+# Sites opened in a decoy tab to look like a real user
+DISTRACTION_SITES     = [
+    "https://www.google.com",
+    "https://www.youtube.com",
+    "https://news.ycombinator.com",
+    "https://www.reddit.com",
+    "https://www.linkedin.com",
+]
 
 
 class JobSession:
@@ -157,6 +169,9 @@ class JobSession:
                 self.store.mark_applied(job["job_id"])
                 applied_count += 1
                 if applied_count < max_applications:
+                    # Randomly fire a browser distraction before the delay
+                    if not TEST_MODE and random.random() < DISTRACTION_CHANCE:
+                        self._browser_distraction()
                     self._inter_application_delay()
             else:
                 self.store.mark_skipped(job["job_id"], "apply_failed")
@@ -217,9 +232,66 @@ class JobSession:
         """Scroll down the page in irregular steps, occasionally back up."""
         steps = random.randint(3, 7)
         for i in range(steps):
-            # Random scroll amount — not always the same direction
             direction = 1 if random.random() > 0.2 else -1   # 20% chance to scroll up
             amount    = random.randint(250, 600) * direction
             self.page.evaluate(f"window.scrollBy(0, {amount})")
             pause = random.uniform(SCROLL_PAUSE_MIN, SCROLL_PAUSE_MAX)
             time.sleep(pause)
+
+    def _browser_distraction(self):
+        """Randomly pick one of three distraction behaviours between job applications.
+
+        Three modes (weighted):
+          40% — open a new tab on a random site, browse briefly, close it
+          25% — simulate network going offline for a short burst
+          35% — idle pause (user walked away from keyboard)
+        """
+        roll = random.random()
+
+        if roll < 0.40:
+            self._distraction_new_tab()
+        elif roll < 0.65:
+            self._distraction_network_drop()
+        else:
+            self._distraction_idle()
+
+    def _distraction_new_tab(self):
+        """Open a random website in a new tab, scroll a bit, then close it."""
+        site = random.choice(DISTRACTION_SITES)
+        dwell = random.uniform(45, 3 * 60)   # 45s – 3 min
+        logger.debug("Distraction: opening %s for %.0fs", site, dwell)
+        try:
+            new_tab = self.page.context.new_page()
+            new_tab.goto(site, wait_until="domcontentloaded", timeout=15000)
+            new_tab.wait_for_timeout(random.randint(2000, 5000))
+            # Scroll the tab a few times to look active
+            for _ in range(random.randint(2, 5)):
+                new_tab.evaluate(f"window.scrollBy(0, {random.randint(200, 500)})")
+                time.sleep(random.uniform(1.5, 4.0))
+            remaining = max(0, dwell - 20)
+            time.sleep(remaining)
+        except Exception as e:
+            logger.debug("Distraction tab error: %s", e)
+        finally:
+            try:
+                new_tab.close()
+            except Exception:
+                pass
+        time.sleep(random.uniform(2, 5))   # brief pause after closing tab
+
+    def _distraction_network_drop(self):
+        """Take the browser offline briefly — simulates spotty connection."""
+        duration = random.uniform(15, 50)
+        logger.debug("Distraction: network drop for %.0fs", duration)
+        try:
+            self.page.context.set_offline(True)
+            time.sleep(duration)
+        finally:
+            self.page.context.set_offline(False)
+        time.sleep(random.uniform(3, 8))   # reconnect settle time
+
+    def _distraction_idle(self):
+        """Long do-nothing pause — user stepped away from keyboard."""
+        pause = random.uniform(3 * 60, 10 * 60)   # 3–10 minutes
+        logger.debug("Distraction: idle pause %.1f min", pause / 60)
+        time.sleep(pause)

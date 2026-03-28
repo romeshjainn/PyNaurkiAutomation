@@ -16,6 +16,7 @@ import time
 
 from playwright.sync_api import Page
 
+from core.utils import human_type
 from services.locators.naukri_locators import ChatbotLocators
 
 logger = logging.getLogger(__name__)
@@ -204,10 +205,9 @@ class JobChatbot:
             logger.warning("No text answer for '%s' — typing default '2'", question[:60])
             answer_text = "2"
 
-        # Clear existing content and type answer
-        text_field.click()
+        # Clear existing content and type answer with human rhythm
         text_field.evaluate("el => el.innerText = ''")
-        text_field.type(answer_text, delay=60)
+        human_type(self.page, text_field, answer_text)
         logger.info("Text answer: '%s'", answer_text)
         time.sleep(ANSWER_DELAY)
 

@@ -2,12 +2,13 @@ import email
 import email.message
 import imaplib
 import logging
+import random
 import re
 import time
 from playwright.sync_api import Page
 from config.settings import NAUKRI_LOGIN_URL, NAUKRI_PROFILE_URL, NAUKRI_EMAIL, NAUKRI_PASSWORD, GMAIL_APP_PASSWORD, SESSION_FILE
 from services.locators.naukri_locators import LoginLocators, OTPLocators
-from core.utils import try_selectors
+from core.utils import try_selectors, human_type
 
 logger = logging.getLogger(__name__)
 
@@ -47,19 +48,19 @@ class LoginService:
     # ── Private ───────────────────────────────────────────────────────────────
 
     def _fill_and_submit(self):
-        # 1. Fill email
+        # 1. Fill email — human keystroke rhythm
         email_field = try_selectors(self.page, LoginLocators.EMAIL, timeout=3000)
         if not email_field:
             raise RuntimeError("Email input field not found")
-        email_field.fill(NAUKRI_EMAIL)
-        self.page.wait_for_timeout(400)
+        human_type(self.page, email_field, NAUKRI_EMAIL)
+        self.page.wait_for_timeout(random.randint(400, 900))
 
-        # 2. Fill password
+        # 2. Fill password — human keystroke rhythm
         pwd_field = try_selectors(self.page, LoginLocators.PASSWORD, timeout=3000)
         if not pwd_field:
             raise RuntimeError("Password input field not found")
-        pwd_field.fill(NAUKRI_PASSWORD)
-        self.page.wait_for_timeout(400)
+        human_type(self.page, pwd_field, NAUKRI_PASSWORD)
+        self.page.wait_for_timeout(random.randint(400, 900))
 
         # 3. Submit
         submit = try_selectors(self.page, LoginLocators.SUBMIT, timeout=3000)

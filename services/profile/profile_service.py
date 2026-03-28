@@ -1,5 +1,7 @@
 import logging
 import os
+import random
+import time
 from pathlib import Path
 from playwright.sync_api import Page
 from config.settings import NAUKRI_PROFILE_URL
@@ -26,24 +28,79 @@ class ProfileService:
     def update(self) -> dict:
         """Navigate to profile page and update headline, summary, and resume.
 
-        Returns a dict with before/after values for the daily report:
-            prev_headline, new_headline, prev_summary, new_summary, resume_path
+        Not everything is updated every day — randomized to look human:
+          - Resume upload:  always (keeps profile active)
+          - Headline:       80% chance
+          - Summary:        85% chance
+          - Each part has a random gap of 4–12 minutes between them
+
+        Returns a dict with before/after values for the daily report.
         """
         self._go_to_profile()
         current_headline, current_summary = self._scrape_current_headline_and_summary()
+
+        # Decide what to update today — equal 33/33/33 split:
+        #   0.00–0.33 → both headline and summary
+        #   0.33–0.66 → headline only
+        #   0.66–1.00 → summary only
+        roll = random.random()
+        if roll < 0.33:
+            do_headline, do_summary = True, True
+        elif roll < 0.66:
+            do_headline, do_summary = True, False
+        else:
+            do_headline, do_summary = False, True
+
+        logger.info(
+            "Today's profile plan — resume: YES | headline: %s | summary: %s",
+            "YES" if do_headline else "SKIP",
+            "YES" if do_summary  else "SKIP",
+        )
+
+        # Step 1 — always upload resume
         resume_path = self._upload_resume()
-        headline, summary = generate_headline_and_summary(current_headline, current_summary)
-        self._update_headline(headline)
-        self._close_modal_if_present()
-        self._update_summary(summary)
-        self._close_modal_if_present()
+
+        # Generate AI content only for what we'll actually use
+        new_headline = current_headline
+        new_summary  = current_summary
+
+        if do_headline or do_summary:
+            gen_headline, gen_summary = generate_headline_and_summary(
+                current_headline, current_summary
+            )
+            if do_headline:
+                new_headline = gen_headline
+            if do_summary:
+                new_summary = gen_summary
+
+        # Step 2 — update headline (with delay after resume)
+        if do_headline:
+            self._profile_gap("headline")
+            self._update_headline(new_headline)
+            self._close_modal_if_present()
+
+        # Step 3 — update summary (with delay after headline or resume)
+        if do_summary:
+            self._profile_gap("summary")
+            self._update_summary(new_summary)
+            self._close_modal_if_present()
+
         return {
             "prev_headline": current_headline,
-            "new_headline":  headline,
+            "new_headline":  new_headline,
             "prev_summary":  current_summary,
-            "new_summary":   summary,
+            "new_summary":   new_summary,
             "resume_path":   resume_path,
         }
+
+    def _profile_gap(self, next_step: str):
+        """Random human pause between profile update steps (4–12 minutes)."""
+        delay = random.uniform(4 * 60, 12 * 60)
+        logger.info(
+            "Waiting %.1f min before updating %s (looks human)",
+            delay / 60, next_step,
+        )
+        time.sleep(delay)
 
     # ── Private ───────────────────────────────────────────────────────────────
 
