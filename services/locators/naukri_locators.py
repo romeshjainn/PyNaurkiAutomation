@@ -215,12 +215,11 @@ class ProfileLocators:
         "[data-section='summary'] .para",
     ]
     SUMMARY_EDIT = [
-        "#lazyProfileSummary .widgetHead span.edit.icon",
-        ".profileSummary .widgetHead span.edit.icon",
-        ".widgetHead:has(.widgetTitle:text('Profile summary')) span.edit.icon",
-        ".widgetHead:has(.widgetTitle:text('Profile Summary')) span.edit.icon",
         ".widgetHead:has-text('Profile summary') span.edit.icon",
         ".widgetHead:has-text('Profile Summary') span.edit.icon",
+        ".widgetHead:has(span.widgetTitle:text-is('Profile summary')) span.edit.icon",
+        ".widgetHead:has(span.widgetTitle:text-is('Profile Summary')) span.edit.icon",
+        ".card .widgetHead:has-text('Profile summary') span.edit",
     ]
     SUMMARY_FORM = "form[name='profileSummaryForm']"
     SUMMARY_INPUT = ["textarea#profileSummaryTxt"]

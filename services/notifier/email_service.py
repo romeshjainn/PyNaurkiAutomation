@@ -11,14 +11,17 @@ Usage:
     svc.send_error_alert("Morning session crashed", traceback_str)
 
 report_dict keys (all optional — missing keys are shown as 'N/A'):
-    date            str   — e.g. "2026-03-28"
-    prev_headline   str
-    new_headline    str
-    prev_summary    str
-    new_summary     str
-    resume_path     str | None  — local path to attach
-    applied_jobs    list[dict]  — each: {title, company, url, combined_score}
-    errors          list[str]
+    date                str   — e.g. "2026-03-28"
+    prev_headline       str
+    new_headline        str
+    headline_updated_at str   — e.g. "09:14:32"
+    prev_summary        str
+    new_summary         str
+    summary_updated_at  str   — e.g. "09:27:05"
+    resume_path         str | None  — local path to attach
+    resume_uploaded_at  str   — e.g. "09:02:11"
+    applied_jobs        list[dict]  — each: {title, company, url, combined_score, applied_at}
+    errors              list[str]
 """
 
 import logging
@@ -118,14 +121,28 @@ class EmailService:
 
     @staticmethod
     def _build_report_html(r: dict) -> str:
-        date_str      = _esc(r.get("date", ""))
-        prev_headline = _esc(r.get("prev_headline") or "N/A")
-        new_headline  = _esc(r.get("new_headline")  or "N/A")
-        prev_summary  = _esc(r.get("prev_summary")  or "N/A")
-        new_summary   = _esc(r.get("new_summary")   or "N/A")
-        resume_note   = "Attached to this email." if r.get("resume_path") else "Uploaded to Naukri (no local copy)."
+        date_str             = _esc(r.get("date", ""))
+        prev_headline        = _esc(r.get("prev_headline") or "N/A")
+        new_headline         = _esc(r.get("new_headline")  or "N/A")
+        headline_updated_at  = _esc(r.get("headline_updated_at") or "")
+        prev_summary         = _esc(r.get("prev_summary")  or "N/A")
+        new_summary          = _esc(r.get("new_summary")   or "N/A")
+        summary_updated_at   = _esc(r.get("summary_updated_at") or "")
+        resume_uploaded_at   = _esc(r.get("resume_uploaded_at") or "")
+        resume_note          = "Attached to this email." if r.get("resume_path") else "Uploaded to Naukri (no local copy)."
+        if resume_uploaded_at:
+            resume_note += f"&nbsp; <span style='color:#888;font-size:13px'>({resume_uploaded_at})</span>"
         applied_jobs  = r.get("applied_jobs", [])
         errors        = r.get("errors", [])
+
+        headline_ts_html = (
+            f"&nbsp;<span style='color:#888;font-size:12px;font-weight:normal'>updated at {headline_updated_at}</span>"
+            if headline_updated_at else ""
+        )
+        summary_ts_html = (
+            f"&nbsp;<span style='color:#888;font-size:12px;font-weight:normal'>updated at {summary_updated_at}</span>"
+            if summary_updated_at else ""
+        )
 
         # Jobs table rows
         job_rows = ""
@@ -135,16 +152,25 @@ class EmailService:
             url   = _esc(job.get("url", ""))
             title = _esc(job.get("title", ""))
             co    = _esc(job.get("company", ""))
+            raw_ts = job.get("applied_at", "")
+            # applied_at is stored as ISO datetime — show only HH:MM:SS
+            if raw_ts and "T" in raw_ts:
+                time_str = raw_ts.split("T")[1][:8]
+            elif raw_ts:
+                time_str = raw_ts
+            else:
+                time_str = "—"
             job_rows += f"""
             <tr style="background:{'#f9f9f9' if i%2==0 else '#fff'}">
                 <td style="{_td}">{i}</td>
                 <td style="{_td}"><a href="{url}">{title}</a></td>
                 <td style="{_td}">{co}</td>
                 <td style="{_td};text-align:center">{score_str}</td>
+                <td style="{_td};text-align:center;color:#555;font-size:13px">{time_str}</td>
             </tr>"""
 
         if not job_rows:
-            job_rows = f'<tr><td colspan="4" style="{_td};color:#888;text-align:center">No jobs applied today</td></tr>'
+            job_rows = f'<tr><td colspan="5" style="{_td};color:#888;text-align:center">No jobs applied today</td></tr>'
 
         # Errors section
         errors_html = ""
@@ -164,14 +190,14 @@ class EmailService:
             Naukri Daily Report — {date_str}
         </h1>
 
-        <h2 style="{_h2}">Resume Headline</h2>
+        <h2 style="{_h2}">Resume Headline{headline_ts_html}</h2>
         <table style="{_table}">
             <tr><td style="{_label}">Before</td><td style="{_td}">{prev_headline}</td></tr>
             <tr style="background:#f9f9f9"><td style="{_label}">After</td>
                 <td style="{_td};color:#27ae60"><strong>{new_headline}</strong></td></tr>
         </table>
 
-        <h2 style="{_h2}">Profile Summary</h2>
+        <h2 style="{_h2}">Profile Summary{summary_ts_html}</h2>
         <table style="{_table}">
             <tr><td style="{_label};vertical-align:top">Before</td>
                 <td style="{_td};white-space:pre-wrap">{prev_summary}</td></tr>
@@ -191,6 +217,7 @@ class EmailService:
                     <th style="{_th}">Title</th>
                     <th style="{_th}">Company</th>
                     <th style="{_th}">Score</th>
+                    <th style="{_th}">Time Applied</th>
                 </tr>
             </thead>
             <tbody>{job_rows}</tbody>

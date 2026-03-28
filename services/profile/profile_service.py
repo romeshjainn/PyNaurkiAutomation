@@ -2,6 +2,7 @@ import logging
 import os
 import random
 import time
+from datetime import datetime
 from pathlib import Path
 from playwright.sync_api import Page
 from config.settings import NAUKRI_PROFILE_URL
@@ -67,6 +68,7 @@ class ProfileService:
 
         # Step 1 — always upload resume
         resume_path = self._upload_resume()
+        resume_uploaded_at = datetime.now().strftime("%H:%M:%S")
 
         # Generate AI content only for what we'll actually use
         new_headline = current_headline
@@ -82,23 +84,30 @@ class ProfileService:
                 new_summary = gen_summary
 
         # Step 2 — update headline (with delay after resume)
+        headline_updated_at = None
         if do_headline:
             self._profile_gap("headline")
             self._update_headline(new_headline)
             self._close_modal_if_present()
+            headline_updated_at = datetime.now().strftime("%H:%M:%S")
 
         # Step 3 — update summary (with delay after headline or resume)
+        summary_updated_at = None
         if do_summary:
             self._profile_gap("summary")
             self._update_summary(new_summary)
             self._close_modal_if_present()
+            summary_updated_at = datetime.now().strftime("%H:%M:%S")
 
         return {
-            "prev_headline": current_headline,
-            "new_headline":  new_headline,
-            "prev_summary":  current_summary,
-            "new_summary":   new_summary,
-            "resume_path":   resume_path,
+            "prev_headline":       current_headline,
+            "new_headline":        new_headline,
+            "headline_updated_at": headline_updated_at,
+            "prev_summary":        current_summary,
+            "new_summary":         new_summary,
+            "summary_updated_at":  summary_updated_at,
+            "resume_path":         resume_path,
+            "resume_uploaded_at":  resume_uploaded_at,
         }
 
     def _profile_gap(self, next_step: str):
@@ -226,9 +235,10 @@ class ProfileService:
         if not clicked:
             raise RuntimeError("Resume headline edit trigger not found")
 
-        self.page.wait_for_selector(ProfileLocators.HEADLINE_FORM, timeout=5000)
+        self.page.wait_for_timeout(1500)
 
-        field = try_selectors(self.page, ProfileLocators.HEADLINE_INPUT, timeout=5000)
+        # Skip form-visible wait (React re-renders cause stale ref timeouts) — go straight to textarea
+        field = try_selectors(self.page, ProfileLocators.HEADLINE_INPUT, timeout=10000)
         if not field:
             raise RuntimeError("Resume headline textarea not found")
         field.fill(headline)
@@ -238,40 +248,49 @@ class ProfileService:
             raise RuntimeError("Resume headline save button not found")
         save.click()
 
-        self.page.wait_for_selector(
-            ProfileLocators.HEADLINE_FORM, state="hidden", timeout=8000
-        )
+        self._close_modal_if_present()
+        self.page.wait_for_timeout(3000)
         logger.info("Resume headline updated")
 
     def _update_summary(self, summary: str):
         logger.info("Updating profile summary...")
 
-        # Scroll down to trigger lazy load of #lazyProfileSummary, then force-click edit icon
+        # Force a fresh page load to reset all lazy-loaded widgets
+        self.page.goto(NAUKRI_PROFILE_URL, wait_until="domcontentloaded")
+        try:
+            self.page.wait_for_selector("#lazyResumeHead, .resumeHeadline", timeout=15000)
+        except Exception:
+            pass
+        self.page.wait_for_timeout(3000)
+
+        # Scroll down incrementally — don't scroll back up (React unmounts lazy sections)
+        clicked = False
         for _ in range(30):
-            self.page.evaluate("window.scrollBy(0, 400)")
-            self.page.wait_for_timeout(400)
             for sel in ProfileLocators.SUMMARY_EDIT:
                 try:
                     loc = self.page.locator(sel).first
-                    loc.scroll_into_view_if_needed(timeout=500)
+                    loc.scroll_into_view_if_needed(timeout=1000)
                     try:
-                        loc.locator("xpath=ancestor::div[contains(@class,'widgetHead')]").first.hover(timeout=500)
+                        loc.locator("xpath=ancestor::div[contains(@class,'widgetHead')]").first.hover(timeout=1000)
                     except Exception:
                         pass
                     self.page.wait_for_timeout(200)
                     loc.click(force=True)
+                    clicked = True
                     break
                 except Exception:
                     continue
-            else:
-                continue
-            break
-        else:
+            if clicked:
+                break
+            self.page.evaluate("window.scrollBy(0, 400)")
+            self.page.wait_for_timeout(300)
+        if not clicked:
             raise RuntimeError("Profile summary widget not found after scrolling")
 
-        self.page.wait_for_selector(ProfileLocators.SUMMARY_FORM, timeout=5000)
+        self.page.wait_for_timeout(1500)
 
-        field = try_selectors(self.page, ProfileLocators.SUMMARY_INPUT, timeout=5000)
+        # Skip form-visible wait (React re-renders cause stale ref timeouts) — go straight to textarea
+        field = try_selectors(self.page, ProfileLocators.SUMMARY_INPUT, timeout=10000)
         if not field:
             raise RuntimeError("Profile summary textarea not found")
         field.fill(summary)
@@ -281,9 +300,8 @@ class ProfileService:
             raise RuntimeError("Profile summary save button not found")
         save.click()
 
-        self.page.wait_for_selector(
-            ProfileLocators.SUMMARY_FORM, state="hidden", timeout=8000
-        )
+        self._close_modal_if_present()
+        self.page.wait_for_timeout(3000)
         logger.info("Profile summary updated")
 
     def _upload_resume(self) -> str | None:
