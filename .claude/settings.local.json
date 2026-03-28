@@ -36,7 +36,10 @@
       "Bash(source .venv/Scripts/activate)",
       "Bash(pkill -f \"services.browser.browser_service\")",
       "Bash(pkill -f \"python -c\")",
-      "Bash(taskkill /F /IM python.exe)"
+      "Bash(taskkill /F /IM python.exe)",
+      "Bash(source venv/Scripts/activate)",
+      "Bash(source venv/bin/activate)",
+      "Bash(.venv/Scripts/python.exe update_profile_now.py)"
     ]
   }
 }

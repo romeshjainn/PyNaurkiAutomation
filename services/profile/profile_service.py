@@ -25,7 +25,7 @@ class ProfileService:
 
     # ── Public ────────────────────────────────────────────────────────────────
 
-    def update(self) -> dict:
+    def update(self, force_all: bool = False, skip_gaps: bool = False) -> dict:
         """Navigate to profile page and update headline, summary, and resume.
 
         Not everything is updated every day — randomized to look human:
@@ -34,22 +34,30 @@ class ProfileService:
           - Summary:        85% chance
           - Each part has a random gap of 4–12 minutes between them
 
+        Args:
+            force_all:  If True, always update both headline and summary (no random skip).
+            skip_gaps:  If True, skip the inter-step human-simulation delays.
+
         Returns a dict with before/after values for the daily report.
         """
+        self._skip_gaps = skip_gaps
         self._go_to_profile()
         current_headline, current_summary = self._scrape_current_headline_and_summary()
 
-        # Decide what to update today — equal 33/33/33 split:
-        #   0.00–0.33 → both headline and summary
-        #   0.33–0.66 → headline only
-        #   0.66–1.00 → summary only
-        roll = random.random()
-        if roll < 0.33:
+        if force_all:
             do_headline, do_summary = True, True
-        elif roll < 0.66:
-            do_headline, do_summary = True, False
         else:
-            do_headline, do_summary = False, True
+            # Decide what to update today — equal 33/33/33 split:
+            #   0.00–0.33 → both headline and summary
+            #   0.33–0.66 → headline only
+            #   0.66–1.00 → summary only
+            roll = random.random()
+            if roll < 0.33:
+                do_headline, do_summary = True, True
+            elif roll < 0.66:
+                do_headline, do_summary = True, False
+            else:
+                do_headline, do_summary = False, True
 
         logger.info(
             "Today's profile plan — resume: YES | headline: %s | summary: %s",
@@ -94,7 +102,11 @@ class ProfileService:
         }
 
     def _profile_gap(self, next_step: str):
-        """Random human pause between profile update steps (4–12 minutes)."""
+        """Random human pause between profile update steps (4–12 minutes).
+        Skipped when skip_gaps=True (on-demand / manual runs)."""
+        if getattr(self, "_skip_gaps", False):
+            logger.info("Skipping inter-step gap before %s (skip_gaps=True)", next_step)
+            return
         delay = random.uniform(4 * 60, 12 * 60)
         logger.info(
             "Waiting %.1f min before updating %s (looks human)",
@@ -304,14 +316,23 @@ class ProfileService:
         if not upload_input:
             raise RuntimeError("Resume upload input not found")
 
+        # input#attachCV has a disabled attribute — remove it before uploading
+        for sel in ProfileLocators.RESUME_UPLOAD:
+            try:
+                self.page.evaluate(
+                    "sel => { const el = document.querySelector(sel); if (el) el.removeAttribute('disabled'); }",
+                    sel,
+                )
+            except Exception:
+                pass
+
         with open(resume_path, "rb") as f:
             upload_input.set_input_files(
                 {
                     "name": _RESUME_UPLOAD_NAME,
                     "mimeType": "application/pdf",
                     "buffer": f.read(),
-                },
-                force=True,  # input#attachCV has disabled attr, force bypasses it
+                }
             )
 
         # Confirm the "replace resume" dialog if it appears
