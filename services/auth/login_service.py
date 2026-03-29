@@ -9,6 +9,7 @@ from playwright.sync_api import Page
 from config.settings import NAUKRI_LOGIN_URL, NAUKRI_PROFILE_URL, NAUKRI_EMAIL, NAUKRI_PASSWORD, GMAIL_APP_PASSWORD, SESSION_FILE
 from services.locators.naukri_locators import LoginLocators, OTPLocators
 from core.utils import try_selectors, human_type
+from core.debug_utils import save_debug_snapshot
 
 logger = logging.getLogger(__name__)
 
@@ -57,6 +58,7 @@ class LoginService:
         # 1. Fill email — human keystroke rhythm
         email_field = try_selectors(self.page, LoginLocators.EMAIL, timeout=3000)
         if not email_field:
+            save_debug_snapshot(self.page, "email_field_not_found")
             raise RuntimeError("Email input field not found")
         human_type(self.page, email_field, NAUKRI_EMAIL)
         self.page.wait_for_timeout(random.randint(400, 900))
@@ -64,6 +66,7 @@ class LoginService:
         # 2. Fill password — human keystroke rhythm
         pwd_field = try_selectors(self.page, LoginLocators.PASSWORD, timeout=3000)
         if not pwd_field:
+            save_debug_snapshot(self.page, "password_field_not_found")
             raise RuntimeError("Password input field not found")
         human_type(self.page, pwd_field, NAUKRI_PASSWORD)
         self.page.wait_for_timeout(random.randint(400, 900))
@@ -71,6 +74,7 @@ class LoginService:
         # 3. Submit
         submit = try_selectors(self.page, LoginLocators.SUBMIT, timeout=3000)
         if not submit:
+            save_debug_snapshot(self.page, "login_submit_not_found")
             raise RuntimeError("Login submit button not found")
         submit.click()
 
@@ -84,6 +88,7 @@ class LoginService:
                 timeout=30000,
             )
         except Exception:
+            save_debug_snapshot(self.page, "login_failed_still_on_login_page")
             raise RuntimeError("Login failed — still on login page after submit")
 
         self.page.context.storage_state(path=SESSION_FILE)
@@ -100,6 +105,7 @@ class LoginService:
         logger.info("OTP screen detected — fetching OTP from Gmail...")
         otp = self._fetch_otp_from_gmail()
         if not otp or len(otp) != 6:
+            save_debug_snapshot(self.page, "otp_not_retrieved")
             raise RuntimeError("Could not retrieve a valid 6-digit OTP from Gmail")
 
         logger.info("OTP retrieved — filling fields")
@@ -110,6 +116,7 @@ class LoginService:
 
         submit = try_selectors(self.page, OTPLocators.SUBMIT, timeout=3000)
         if not submit:
+            save_debug_snapshot(self.page, "otp_submit_not_found")
             raise RuntimeError("OTP submit button not found")
         submit.click()
         logger.info("OTP submitted successfully")

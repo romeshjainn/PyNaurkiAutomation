@@ -8,6 +8,7 @@ from playwright.sync_api import Page
 from config.settings import NAUKRI_PROFILE_URL
 from services.locators.naukri_locators import ProfileLocators
 from core.utils import try_selectors
+from core.debug_utils import save_debug_snapshot
 
 logger = logging.getLogger(__name__)
 
@@ -251,6 +252,7 @@ class ProfileService:
             except Exception:
                 continue
         if not clicked:
+            save_debug_snapshot(self.page, "headline_edit_trigger_not_found")
             raise RuntimeError("Resume headline edit trigger not found")
 
         self.page.wait_for_timeout(1500)
@@ -258,11 +260,13 @@ class ProfileService:
         # Skip form-visible wait (React re-renders cause stale ref timeouts) — go straight to textarea
         field = try_selectors(self.page, ProfileLocators.HEADLINE_INPUT, timeout=10000)
         if not field:
+            save_debug_snapshot(self.page, "headline_textarea_not_found")
             raise RuntimeError("Resume headline textarea not found")
         field.fill(headline)
 
         save = try_selectors(self.page, ProfileLocators.HEADLINE_SAVE, timeout=5000)
         if not save:
+            save_debug_snapshot(self.page, "headline_save_button_not_found")
             raise RuntimeError("Resume headline save button not found")
         save.click()
 
@@ -303,6 +307,7 @@ class ProfileService:
             self.page.evaluate("window.scrollBy(0, 400)")
             self.page.wait_for_timeout(300)
         if not clicked:
+            save_debug_snapshot(self.page, "summary_edit_trigger_not_found")
             raise RuntimeError("Profile summary widget not found after scrolling")
 
         self.page.wait_for_timeout(1500)
@@ -310,11 +315,13 @@ class ProfileService:
         # Skip form-visible wait (React re-renders cause stale ref timeouts) — go straight to textarea
         field = try_selectors(self.page, ProfileLocators.SUMMARY_INPUT, timeout=10000)
         if not field:
+            save_debug_snapshot(self.page, "summary_textarea_not_found")
             raise RuntimeError("Profile summary textarea not found")
         field.fill(summary)
 
         save = try_selectors(self.page, ProfileLocators.SUMMARY_SAVE, timeout=5000)
         if not save:
+            save_debug_snapshot(self.page, "summary_save_button_not_found")
             raise RuntimeError("Profile summary save button not found")
         save.click()
 
@@ -350,6 +357,7 @@ class ProfileService:
 
         upload_input = try_selectors(self.page, ProfileLocators.RESUME_UPLOAD, timeout=5000)
         if not upload_input:
+            save_debug_snapshot(self.page, "resume_upload_input_not_found")
             raise RuntimeError("Resume upload input not found")
 
         # input#attachCV has a disabled attribute — remove it before uploading
